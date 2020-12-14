@@ -13,6 +13,8 @@ html {
   font-family: $font-family-default;
   scroll-behavior: smooth;
   box-sizing: border-box;
+
+  background-color: $color-primary-main;
 }
 
 @media (max-width: 800px) {
