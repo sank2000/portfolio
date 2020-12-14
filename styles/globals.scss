@@ -1,16 +1,28 @@
-html,
-body {
-  padding: 0;
+@import './variables.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
+html {
+  font-size: 62.5%;
+  font-family: $font-family-default;
+  scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
 }

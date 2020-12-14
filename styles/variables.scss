@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+
+@import './utilities.scss';
+
+$color-primary-light: #353a44;
+$color-primary-main: #252a34;
+$color-primary-dark: #060708;
+
+$color-white: #fff;
+$color-black: black;
+
+$color-slate-light: #eee;
+$color-slate-dark: #0b0d14;
+
+$font-family-default: 'Poppins', sans-serif;
+$font-family-special: 'Nova Square', cursive;
+
+// Shades of gray:
+$color-gray-1: #f7f7f7;
+$color-gray-2: #f0f0f0;
+$color-gray-3: #eee;
+$color-gray-4: #e4e4e4;
+$color-gray-5: #ccc;
+$color-gray-6: #424242;
+$color-gray-7: #111;
+$color-gray-8: #090909;
