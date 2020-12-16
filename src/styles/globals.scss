@@ -9,22 +9,24 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //10px
   font-family: $font-family-default;
   scroll-behavior: smooth;
   box-sizing: border-box;
 
   background-color: $color-primary-main;
-}
 
-@media (max-width: 800px) {
-  html {
-    font-size: 56.25%;
+  padding: 4rem 8rem;
+
+  @media (max-width: 1200px) {
+    font-size: 56.25%; //9px
   }
-}
 
-@media (max-width: 600px) {
-  html {
-    font-size: 50%;
+  @media (max-width: 900px) {
+    font-size: 50%; //8px
+  }
+
+  @media (max-width: 600px) {
+    font-size: 43.75%; //7px
   }
 }
