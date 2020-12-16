@@ -17,7 +17,7 @@ export default function Home() {
         <h1>SAN </h1>
       </main>
       <footer className={classes.footer}>
-        <span>{'>>>'}</span>
+        <span className="icon-arrow"></span>
       </footer>
     </section>
   );
