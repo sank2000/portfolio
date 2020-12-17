@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
-@import './utilities.scss';
-
 $color-primary-light: #353a44;
 $color-primary-main: #252a34;
 $color-primary-dark: #060708;
@@ -25,3 +23,13 @@ $color-gray-5: #ccc;
 $color-gray-6: #424242;
 $color-gray-7: #111;
 $color-gray-8: #090909;
+
+//common-padding :
+
+$common-padding-l-lg: 8rem;
+$common-padding-l-md: 6rem;
+$common-padding-l-sm: 4rem;
+
+$common-padding-t-lg: 4rem;
+$common-padding-t-md: 3rem;
+$common-padding-t-sm: 2rem;

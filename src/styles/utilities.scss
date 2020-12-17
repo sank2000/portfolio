@@ -1,3 +1,29 @@
+@import './variables.scss';
+
+@mixin padding {
+  padding: $common-padding-t-lg $common-padding-l-lg;
+
+  @media (max-width: 900px) {
+    padding: $common-padding-t-md $common-padding-l-md;
+  }
+
+  @media (max-width: 600px) {
+    padding: $common-padding-t-sm $common-padding-l-sm;
+  }
+}
+
+@mixin fullHeightWithPadding {
+  min-height: calc(100vh - 4rem * 2);
+
+  @media (max-width: 900px) {
+    min-height: calc(100vh - 3rem * 2);
+  }
+
+  @media (max-width: 600px) {
+    min-height: calc(100vh - 2rem * 2);
+  }
+}
+
 /* MIXINS */
 @mixin marginate {
   max-width: 120rem;

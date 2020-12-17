@@ -1,8 +1,30 @@
-@import '../../styles/variables.scss';
+@import '../../styles/utilities.scss';
 
 .section {
-  min-height: calc(100vh - 8rem);
+  @include padding;
+  @include fullHeightWithPadding;
+
   color: $color-white;
+  position: relative;
+  overflow-x: hidden;
+
+  h3 {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    margin: 0 auto;
+    width: 83%;
+    text-align: center;
+    bottom: 0%;
+
+    @media (max-width: 550px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .nav {
@@ -42,6 +64,15 @@
 
 .main {
   min-height: calc(85vh - 8rem);
+
+  @media (max-width: 900px) {
+    min-height: calc(85vh - 3rem * 2);
+  }
+
+  @media (max-width: 600px) {
+    min-height: calc(85vh - 2rem * 2);
+  }
+
   padding: 5rem 0;
   display: flex;
   align-items: center;
