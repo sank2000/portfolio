@@ -1,0 +1,48 @@
+@import '../../styles/utilities.scss';
+
+.section {
+  @include padding;
+  @include fullHeightWithPadding;
+
+  color: $color-white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  span {
+    font-size: 4rem;
+    display: inline-block;
+    color: rgb(187, 187, 187);
+    letter-spacing: 0px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+
+    &::after,
+    &::before {
+      cursor: pointer;
+    }
+  }
+
+  .nav_head {
+    font-size: 5rem;
+    flex-grow: 1;
+    text-align: center;
+    font-family: $font-family-special;
+  }
+}
+
+.main {
+  min-height: calc(85vh - 8rem);
+
+  @media (max-width: 900px) {
+    min-height: calc(85vh - 3rem * 2);
+  }
+
+  @media (max-width: 600px) {
+    min-height: calc(85vh - 2rem * 2);
+  }
+
+  padding: 5rem 0;
+}

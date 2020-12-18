@@ -35,8 +35,8 @@ export default function Home({ setPage }: HomeProp) {
         </motion.h2>
         <h1>SAN </h1>
       </main>
-      <footer className={classes.footer} onClick={() => setPage(2)}>
-        <span className="icon-arrow"></span>
+      <footer className={classes.footer}>
+        <span className="icon-arrow" onClick={() => setPage(2)}></span>
       </footer>
       <h3>FULL STACK DEV</h3>
     </section>
