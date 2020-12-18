@@ -14,15 +14,19 @@ const h2Variants = {
   },
 };
 
-export default function Home() {
+interface HomeProp {
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export default function Home({ setPage }: HomeProp) {
   return (
     <section className={classes.section}>
       <nav className={classes.nav}>
         <div className={classes.nav_brand}>S</div>
         <ul className={classes.nav_links}>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li onClick={() => setPage(2)}>About</li>
+          <li onClick={() => setPage(3)}>Projects</li>
+          <li onClick={() => setPage(4)}>Contact</li>
         </ul>
       </nav>
       <main className={classes.main}>
@@ -31,7 +35,7 @@ export default function Home() {
         </motion.h2>
         <h1>SAN </h1>
       </main>
-      <footer className={classes.footer}>
+      <footer className={classes.footer} onClick={() => setPage(2)}>
         <span className="icon-arrow"></span>
       </footer>
       <h3>FULL STACK DEV</h3>
