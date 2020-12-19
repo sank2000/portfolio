@@ -24,23 +24,22 @@ interface AboutProp {
 
 export default function About({ setPage }: AboutProp) {
   return (
-    <motion.section className={classes.section}>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <nav className={classes.nav}>
-          <span className="icon-arrow" onClick={() => setPage(1)}></span>
-          <h3 className={classes.nav_head}>About</h3>
-        </nav>
+    <motion.div
+      key="about"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <nav className={classes.nav}>
+        <span className="icon-arrow" onClick={() => setPage(1)}></span>
+        <h3 className={classes.nav_head}>About</h3>
+      </nav>
 
-        <main className={classes.main}>&nbsp;</main>
-        <footer className={classes.footer}>
-          <span className="icon-arrow" onClick={() => setPage(3)}></span>
-        </footer>
-      </motion.div>
-    </motion.section>
+      <main className={classes.main}>&nbsp;</main>
+      <footer className={classes.footer}>
+        <span className="icon-arrow" onClick={() => setPage(3)}></span>
+      </footer>
+    </motion.div>
   );
 }

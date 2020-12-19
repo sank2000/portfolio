@@ -12,7 +12,7 @@ export default function Index() {
         <title>san</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section style={{ width: '99vw', overflow: 'hidden' }}>
+      <section className="section">
         <AnimatePresence exitBeforeEnter>
           {page === 1 && <Home setPage={setPage} />}
           {page === 2 && <About setPage={setPage} />}

@@ -1,13 +1,6 @@
 @import '../../styles/utilities.scss';
 
-.section {
-  @include padding;
-  @include fullHeightWithPadding;
-
-  color: $color-white;
-  position: relative;
-  overflow-x: hidden;
-
+.home {
   h3 {
     font-size: 5rem;
     z-index: -1;

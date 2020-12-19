@@ -24,22 +24,21 @@ interface ProjectsProp {
 
 export default function Projects({ setPage }: ProjectsProp) {
   return (
-    <section className={classes.section}>
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      >
-        <nav className={classes.nav}>
-          <span className="icon-arrow" onClick={() => setPage(2)}></span>
-          <h3 className={classes.nav_head}>Projects</h3>
-        </nav>
-        <main className={classes.main}>&nbsp;</main>
-        <footer className={classes.footer}>
-          <span className="icon-arrow" onClick={() => setPage(4)}></span>
-        </footer>
-      </motion.div>
-    </section>
+    <motion.div
+      key="projects"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      <nav className={classes.nav}>
+        <span className="icon-arrow" onClick={() => setPage(2)}></span>
+        <h3 className={classes.nav_head}>Projects</h3>
+      </nav>
+      <main className={classes.main}>&nbsp;</main>
+      <footer className={classes.footer}>
+        <span className="icon-arrow" onClick={() => setPage(4)}></span>
+      </footer>
+    </motion.div>
   );
 }
