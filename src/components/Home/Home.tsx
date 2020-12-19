@@ -34,7 +34,20 @@ export default function Home({ page, setPage }: defaultProps) {
           onClick={() => setPage({ no: 2, forward: true })}
         ></span>
       </footer>
-      <h3>FULL STACK DEV</h3>
+      <motion.h3
+        initial={{ opacity: 0.2 }}
+        animate={{
+          opacity: 1,
+          transition: {
+            opacity: {
+              yoyo: Infinity,
+              duration: 2,
+            },
+          },
+        }}
+      >
+        FULL STACK DEV
+      </motion.h3>
     </motion.div>
   );
 }
