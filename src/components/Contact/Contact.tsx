@@ -4,21 +4,22 @@ import { motion } from 'framer-motion';
 
 import { containerVariants } from '../../constants';
 
-interface ContactProp {
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-}
+import { defaultProps } from '../../types';
 
-export default function Contact({ setPage }: ContactProp) {
+export default function Contact({ page, setPage }: defaultProps) {
   return (
     <motion.div
       key="contact"
       variants={containerVariants}
-      initial="hidden"
+      initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit="exit"
+      exit="exitRight"
     >
       <nav className={classes.nav}>
-        <span className="icon-arrow" onClick={() => setPage(3)}></span>
+        <span
+          className="icon-arrow"
+          onClick={() => setPage({ no: 3, forward: false })}
+        ></span>
         <h3 className={classes.nav_head}>Contact</h3>
       </nav>
       <main className={classes.main}>&nbsp;</main>

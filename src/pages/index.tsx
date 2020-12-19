@@ -3,8 +3,13 @@ import { useState } from 'react';
 import { Home, About, Projects, Contact } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
+import { page } from '../types';
+
 export default function Index() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState<page>({
+    no: 1,
+    forward: true,
+  });
 
   return (
     <>
@@ -14,10 +19,14 @@ export default function Index() {
       </Head>
       <section className="section">
         <AnimatePresence exitBeforeEnter>
-          {page === 1 && <Home setPage={setPage} key="home" />}
-          {page === 2 && <About setPage={setPage} key="about" />}
-          {page === 3 && <Projects setPage={setPage} key="projects" />}
-          {page === 4 && <Contact setPage={setPage} key="contact" />}
+          {page.no === 1 && <Home page={page} setPage={setPage} key="home" />}
+          {page.no === 2 && <About page={page} setPage={setPage} key="about" />}
+          {page.no === 3 && (
+            <Projects page={page} setPage={setPage} key="projects" />
+          )}
+          {page.no === 4 && (
+            <Contact page={page} setPage={setPage} key="contact" />
+          )}
         </AnimatePresence>
       </section>
     </>

@@ -4,26 +4,24 @@ import { motion } from 'framer-motion';
 
 import { containerVariants } from '../../constants';
 
-interface HomeProp {
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-}
+import { defaultProps } from '../../types';
 
-export default function Home({ setPage }: HomeProp) {
+export default function Home({ page, setPage }: defaultProps) {
   return (
     <motion.div
       key="home"
       className={classes.home}
       variants={containerVariants}
-      initial="hidden"
+      initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit="exit"
+      exit="exitLeft"
     >
       <nav className={classes.nav}>
         <div className={classes.nav_brand}>S</div>
         <ul className={classes.nav_links}>
-          <li onClick={() => setPage(2)}>About</li>
-          <li onClick={() => setPage(3)}>Projects</li>
-          <li onClick={() => setPage(4)}>Contact</li>
+          <li onClick={() => setPage({ no: 2, forward: true })}>About</li>
+          <li onClick={() => setPage({ no: 3, forward: true })}>Projects</li>
+          <li onClick={() => setPage({ no: 4, forward: true })}>Contact</li>
         </ul>
       </nav>
       <main className={classes.main}>
@@ -31,7 +29,10 @@ export default function Home({ setPage }: HomeProp) {
         <h1>SAN </h1>
       </main>
       <footer className={classes.footer}>
-        <span className="icon-arrow" onClick={() => setPage(2)}></span>
+        <span
+          className="icon-arrow"
+          onClick={() => setPage({ no: 2, forward: true })}
+        ></span>
       </footer>
       <h3>FULL STACK DEV</h3>
     </motion.div>

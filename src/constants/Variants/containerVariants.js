@@ -1,16 +1,22 @@
 const containerVariants = {
-  hidden: {
+  hiddenRight: {
     opacity: 0,
     x: '100vw',
+  },
+  hiddenLeft: {
+    opacity: 0,
+    x: '-100vw',
   },
   visible: {
     opacity: 1,
     x: 0,
     transition: { type: 'tween', delay: 0.5 },
   },
-  exit: {
+  exitRight: {
     x: '-100vw',
-    transition: { ease: 'easeInOut' },
+  },
+  exitLeft: {
+    x: '100vw',
   },
 };
 
