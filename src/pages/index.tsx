@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { Home, About, Projects, Contact } from '../components';
+import { Home, About, Projects, Contact, Particles } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
 import { page } from '../types';
@@ -18,6 +18,7 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="section">
+        <Particles />
         <AnimatePresence exitBeforeEnter>
           {page.no === 1 && <Home page={page} setPage={setPage} key="home" />}
           {page.no === 2 && <About page={page} setPage={setPage} key="about" />}
