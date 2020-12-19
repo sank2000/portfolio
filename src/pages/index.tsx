@@ -14,10 +14,10 @@ export default function Index() {
       </Head>
       <section className="section">
         <AnimatePresence exitBeforeEnter>
-          {page === 1 && <Home setPage={setPage} />}
-          {page === 2 && <About setPage={setPage} />}
-          {page === 3 && <Projects setPage={setPage} />}
-          {page === 4 && <Contact setPage={setPage} />}
+          {page === 1 && <Home setPage={setPage} key="home" />}
+          {page === 2 && <About setPage={setPage} key="about" />}
+          {page === 3 && <Projects setPage={setPage} key="projects" />}
+          {page === 4 && <Contact setPage={setPage} key="contact" />}
         </AnimatePresence>
       </section>
     </>

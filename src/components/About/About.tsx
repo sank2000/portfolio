@@ -10,7 +10,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { type: 'tween', duration: 0.8, delay: 0.5 },
+    transition: { type: 'tween', delay: 0.5 },
   },
   exit: {
     x: '-100vw',
