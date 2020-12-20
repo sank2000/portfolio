@@ -17,7 +17,9 @@ export default function Home({ page, setPage }: defaultProps) {
       exit="exitLeft"
     >
       <nav className={classes.nav}>
-        <div className={classes.nav_brand}>S</div>
+        <div className={classes.nav_brand}>
+          <img src="/icons/logo white.svg" alt="logo" />
+        </div>
         <ul className={classes.nav_links}>
           <li onClick={() => setPage({ no: 2, forward: true })}>About</li>
           <li onClick={() => setPage({ no: 3, forward: true })}>Projects</li>
