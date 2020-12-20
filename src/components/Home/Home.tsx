@@ -26,7 +26,7 @@ export default function Home({ page, setPage }: defaultProps) {
       </nav>
       <main className={classes.main}>
         <h2>Hi there. I'm </h2>
-        <h1>SAN </h1>
+        <h1>SAN</h1>
       </main>
       <footer className={classes.footer}>
         <span
