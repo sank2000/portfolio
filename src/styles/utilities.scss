@@ -1,5 +1,23 @@
 @import './variables.scss';
 
+@keyframes grow {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @mixin padding {
   padding: $common-padding-t-lg $common-padding-l-lg;
 
