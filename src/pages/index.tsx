@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { Home, About, Projects, Contact, Particles } from '../components';
+import { Home, About, Projects, More, Particles } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
 import { page } from '../types';
@@ -51,9 +51,7 @@ export default function Index() {
           {page.no === 3 && (
             <Projects page={page} setPage={setPage} key="projects" />
           )}
-          {page.no === 4 && (
-            <Contact page={page} setPage={setPage} key="contact" />
-          )}
+          {page.no === 4 && <More page={page} setPage={setPage} key="more" />}
         </AnimatePresence>
       </section>
     </>
