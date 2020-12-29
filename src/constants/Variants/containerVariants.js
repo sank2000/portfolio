@@ -12,10 +12,10 @@ const containerVariants = {
     x: 0,
     transition: { type: 'tween', delay: 0.5 },
   },
-  exitRight: {
+  exitLeft: {
     x: '-100vw',
   },
-  exitLeft: {
+  exitRight: {
     x: '100vw',
   },
 };

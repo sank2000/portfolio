@@ -13,7 +13,7 @@ export default function More({ page, setPage }: defaultProps) {
       variants={containerVariants}
       initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit="exitRight"
+      exit="exitLeft"
     >
       <nav className={classes.nav}>
         <span

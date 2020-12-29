@@ -14,7 +14,7 @@ export default function Home({ page, setPage }: defaultProps) {
       variants={containerVariants}
       initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit="exitLeft"
+      exit="exitRight"
     >
       <nav className={classes.nav}>
         <div className={classes.nav_brand}>

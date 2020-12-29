@@ -7,7 +7,7 @@ import { containerVariants } from '../../constants';
 import { defaultProps } from '../../types';
 
 export default function Projects({ page, setPage }: defaultProps) {
-  const [exitLeft, setExitLeft] = useState(true);
+  const [exitLeft, setExitLeft] = useState(false);
 
   return (
     <motion.div
@@ -15,13 +15,13 @@ export default function Projects({ page, setPage }: defaultProps) {
       variants={containerVariants}
       initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit={exitLeft && page.forward ? 'exitLeft' : 'exitRight'}
+      exit={exitLeft ? 'exitLeft' : 'exitRight'}
     >
       <nav className={classes.nav}>
         <span
           className="icon-arrow"
           onClick={() => {
-            setExitLeft(false);
+            setExitLeft(true);
             setPage({ no: 2, forward: false });
           }}
         ></span>
