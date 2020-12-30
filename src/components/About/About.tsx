@@ -72,10 +72,18 @@ export default function About({ page, setPage }: defaultProps) {
         </div>
       </main>
       <footer className={classes.footer}>
-        <span
+        <motion.span
           className="icon-arrow"
           onClick={() => setPage({ no: 3, forward: true })}
-        ></span>
+          animate={{
+            scale: [1, 1.3, 1, 1.3, 1],
+            rotate: [90, 90, 90, 90, 90],
+            transition: {
+              yoyo: Infinity,
+              duration: 2,
+            },
+          }}
+        ></motion.span>
       </footer>
     </motion.div>
   );

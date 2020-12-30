@@ -31,25 +31,20 @@ export default function Home({ page, setPage }: defaultProps) {
         <h1>SAN</h1>
       </main>
       <footer className={classes.footer}>
-        <span
+        <motion.span
           className="icon-arrow"
           onClick={() => setPage({ no: 2, forward: true })}
-        ></span>
-      </footer>
-      <motion.h3
-        initial={{ opacity: 0.2 }}
-        animate={{
-          opacity: 1,
-          transition: {
-            opacity: {
+          animate={{
+            scale: [1, 1.3, 1, 1.3, 1],
+            rotate: [90, 90, 90, 90, 90],
+            transition: {
               yoyo: Infinity,
               duration: 2,
             },
-          },
-        }}
-      >
-        FULL STACK DEV
-      </motion.h3>
+          }}
+        ></motion.span>
+      </footer>
+      <h3>FULL STACK DEV</h3>
     </motion.div>
   );
 }
