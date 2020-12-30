@@ -88,7 +88,29 @@ export default function More({ page, setPage }: defaultProps) {
           <div className={classes.head}>
             <h3>GET IN TOUCH</h3>
           </div>
-          <div></div>
+          <div>
+            <h4>
+              If you want to show me something interesting or want to talk to me
+              , my inbox is always open.
+            </h4>
+            <div className={classes.links}>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/santhosh-k-589203178/"
+              >
+                <span className="icon-linkedin"></span>
+              </a>
+              <a target="_blank" href="https://twitter.com/santhoshvelr">
+                <span className="icon-twitter"></span>
+              </a>
+              <a target="_blank" href="mailto:santhoshvelr@gmail.com">
+                <span className="icon-gmail"></span>
+              </a>
+              <a target="_blank" href="https://github.com/sank2000">
+                <span className="icon-github1"></span>
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </motion.div>
