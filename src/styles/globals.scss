@@ -30,6 +30,31 @@ html {
   }
 }
 
+::selection {
+  background-color: $color-primary-dark;
+  color: $color-white;
+}
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba($color-primary-dark, 0.75);
+  opacity: 0.5;
+  border-radius: 1rem;
+  transition: all 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba($color-primary-dark, 1);
+  opacity: 1;
+}
+
 .section {
   @include padding;
   @include fullHeightWithPadding;

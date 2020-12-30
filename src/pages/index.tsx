@@ -41,7 +41,7 @@ export default function Index() {
         <link rel="shortcut icon" href="/ico/favicon.ico" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="/ico/browserconfig.xml" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#252a34" />
       </Head>
       <section className="section">
         <Particles />
