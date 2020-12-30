@@ -24,9 +24,14 @@ export default function Particle() {
             type: ['image', 'circle'],
             image: [
               {
+                src: '/react.svg',
+                height: 24,
+                width: 24,
+              },
+              {
                 src: '/figma.svg',
                 height: 20,
-                width: 23,
+                width: 16,
               },
               {
                 src: '/mongodb.svg',
@@ -40,13 +45,8 @@ export default function Particle() {
               },
               {
                 src: '/next-dot-js.svg',
-                height: 20,
-                width: 20,
-              },
-              {
-                src: '/react.svg',
-                height: 20,
-                width: 20,
+                height: 25,
+                width: 25,
               },
               {
                 src: '/typescript.svg',
