@@ -8,4 +8,10 @@ interface defaultProps {
   page: page;
 }
 
-export { page, defaultProps };
+interface stackProps {
+  name: string;
+  color: string;
+  backgroundColor: string;
+}
+
+export { page, defaultProps, stackProps };
