@@ -36,22 +36,25 @@ export default function About({ page, setPage }: defaultProps) {
           </div>
 
           <h3>
-            I am <span className={classes.name}>Santhosh</span> pursuing
-            Computer Science and Engineering at the University College of
-            Engineering, Trichy.
+            I am <span className={classes.name}>Santhosh</span> shortly{' '}
+            <span className={classes.short_name}>San </span>
+            doing my bachelor's degree in University College of Engineering,
+            Trichy
           </h3>
 
           <ul>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I am from Salem.
+              <img src="/icons/logo white.svg" alt="logo" />I am from the
+              so-called "Mango City", Salem.
             </li>
             <li>
               <img src="/icons/logo white.svg" alt="logo" />I am passionate
-              about coding & designing.
+              about coding & designing, inquisitive in exploring new
+              technologies to solve real-life problems
             </li>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I am a good team
-              player.
+              <img src="/icons/logo white.svg" alt="logo" />I love working with
+              people as a team and I am a good team player too
             </li>
 
             <li>
@@ -59,8 +62,12 @@ export default function About({ page, setPage }: defaultProps) {
               new technologies and use them to solve real-life problems.
             </li>
             <li>
+              <img src="/icons/logo white.svg" alt="logo" />
+              Ready to give a shot to everything, I wanted in life.
+            </li>
+            <li>
               <img src="/icons/logo white.svg" alt="logo" />I spend my free time
-              scrolling through social media, hearing songs, and dance.
+              scrolling social media, listening to songs, and dancing.
             </li>
           </ul>
         </div>
@@ -68,7 +75,9 @@ export default function About({ page, setPage }: defaultProps) {
           <div>
             <img src="/me.jpg" alt="me" />
           </div>
-          <a href="/">RESUME</a>
+          <a target="_blank" href="/san_cv.pdf">
+            CV
+          </a>
         </div>
       </main>
       <footer className={classes.footer}>
