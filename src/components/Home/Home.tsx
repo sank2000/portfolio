@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './style.module.scss';
 import { motion } from 'framer-motion';
 
@@ -7,6 +7,18 @@ import { containerVariants } from '../../constants';
 import { defaultProps } from '../../types';
 
 export default function Home({ page, setPage }: defaultProps) {
+  const [active, setActive] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActive((old) => !old);
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <motion.div
       key="home"
@@ -44,7 +56,28 @@ export default function Home({ page, setPage }: defaultProps) {
           }}
         ></motion.span>
       </footer>
-      <h3>FULL STACK DEV</h3>
+      <h3>
+        {['F', 'U', 'L', 'L ', 'S', 'T', 'A', 'C', 'K ', 'D', 'E', 'V'].map(
+          (val, ind) => {
+            return (
+              <span
+                key={ind}
+                style={{
+                  color: active
+                    ? ind % 2 === 0
+                      ? '#fff'
+                      : 'rgba(255, 255, 255, 0.2)'
+                    : ind % 2 !== 0
+                    ? '#fff'
+                    : 'rgba(255, 255, 255, 0.2)',
+                }}
+              >
+                {val}
+              </span>
+            );
+          }
+        )}
+      </h3>
     </motion.div>
   );
 }
