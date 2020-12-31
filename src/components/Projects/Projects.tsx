@@ -59,6 +59,18 @@ export default function Projects({ page, setPage }: defaultProps) {
           }}
         ></span>
         <h3 className={classes.nav_head}>Projects</h3>
+        <motion.span
+          className="icon-arrow"
+          onClick={() => setPage({ no: 4, forward: true })}
+          animate={{
+            scale: [1, 1.3, 1, 1.3, 1],
+            rotate: [90, 90, 90, 90, 90],
+            transition: {
+              yoyo: Infinity,
+              duration: 2,
+            },
+          }}
+        ></motion.span>
       </nav>
       <main className={classes.main}>
         <div className={classes.slider_dot_container}>
@@ -153,20 +165,6 @@ export default function Projects({ page, setPage }: defaultProps) {
           </AnimatePresence>
         </div>
       </main>
-      <footer className={classes.footer}>
-        <motion.span
-          className="icon-arrow"
-          onClick={() => setPage({ no: 4, forward: true })}
-          animate={{
-            scale: [1, 1.3, 1, 1.3, 1],
-            rotate: [90, 90, 90, 90, 90],
-            transition: {
-              yoyo: Infinity,
-              duration: 2,
-            },
-          }}
-        ></motion.span>
-      </footer>
     </motion.div>
   );
 }
