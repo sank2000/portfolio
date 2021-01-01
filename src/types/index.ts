@@ -14,4 +14,4 @@ interface stackProps {
   backgroundColor: string;
 }
 
-export { page, defaultProps, stackProps };
+export type { page, defaultProps, stackProps };
