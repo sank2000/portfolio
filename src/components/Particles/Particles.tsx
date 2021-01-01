@@ -7,7 +7,7 @@ export default function Particle() {
       params={{
         particles: {
           number: {
-            value: 8,
+            value: 10,
             density: {
               enable: true,
               value_area: 800,
@@ -21,7 +21,7 @@ export default function Particle() {
             out_mode: 'out',
           },
           shape: {
-            type: ['image', 'circle'],
+            type: ['circle', 'image'],
             image: [
               {
                 src: '/react.svg',
@@ -52,6 +52,16 @@ export default function Particle() {
                 src: '/typescript.svg',
                 height: 20,
                 width: 20,
+              },
+              {
+                src: '/nodejs.svg',
+                height: 25,
+                width: 25,
+              },
+              {
+                src: '/graphql.svg',
+                height: 25,
+                width: 25,
               },
             ],
           },
