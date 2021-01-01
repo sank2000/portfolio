@@ -87,7 +87,10 @@ export default function About({ page, setPage }: defaultProps) {
           <div>
             <img src="/me.jpg" alt="me" />
           </div>
-          <a target="_blank" href="/san_cv.pdf">
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1cR4-4cVQqnRJf6QqFGKyFDwQ2CeBnbUr/view?usp=sharing"
+          >
             CV
           </a>
         </div>
