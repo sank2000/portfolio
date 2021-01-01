@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { useState } from 'react';
-import { Home, About, Projects, More, Particles } from '../components';
+import { useState, useEffect } from 'react';
+import { Home, About, Projects, More, Particles, Loader } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
 import { page } from '../types';
@@ -10,6 +10,13 @@ export default function Index() {
     no: 1,
     forward: true,
   });
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3500);
+  }, []);
 
   return (
     <>
@@ -43,17 +50,22 @@ export default function Index() {
         <meta name="msapplication-config" content="/ico/browserconfig.xml" />
         <meta name="theme-color" content="#252a34" />
       </Head>
-      <section className="section">
-        <Particles />
-        <AnimatePresence exitBeforeEnter>
-          {page.no === 1 && <Home page={page} setPage={setPage} key="home" />}
-          {page.no === 2 && <About page={page} setPage={setPage} key="about" />}
-          {page.no === 3 && (
-            <Projects page={page} setPage={setPage} key="projects" />
-          )}
-          {page.no === 4 && <More page={page} setPage={setPage} key="more" />}
-        </AnimatePresence>
-      </section>
+      <>
+        {loader && <Loader />}
+        <section className="section">
+          <Particles />
+          <AnimatePresence exitBeforeEnter>
+            {page.no === 1 && <Home page={page} setPage={setPage} key="home" />}
+            {page.no === 2 && (
+              <About page={page} setPage={setPage} key="about" />
+            )}
+            {page.no === 3 && (
+              <Projects page={page} setPage={setPage} key="projects" />
+            )}
+            {page.no === 4 && <More page={page} setPage={setPage} key="more" />}
+          </AnimatePresence>
+        </section>
+      </>
     </>
   );
 }
