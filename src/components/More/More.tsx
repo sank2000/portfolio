@@ -90,8 +90,8 @@ export default function More({ page, setPage }: defaultProps) {
           </div>
           <div>
             <h4>
-              If you want to show me something interesting or want to talk to me
-              , my inbox is always open.
+              Wanna interact or work with me ? Drop a message .My inbox is
+              always open for you.
             </h4>
             <div className={classes.links}>
               <a
