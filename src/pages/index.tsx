@@ -21,7 +21,7 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>santhosh | personal portfolio</title>
+        <title>Santhosh | personal portfolio</title>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
