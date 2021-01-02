@@ -115,6 +115,8 @@ export default function Projects({ page, setPage }: defaultProps) {
           className={classes.card_container}
           onMouseEnter={() => clearInterval(intervalRef.current)}
           onMouseLeave={() => setCurrent()}
+          onTouchStart={() => clearInterval(intervalRef.current)}
+          onTouchEnd={() => setCurrent()}
         >
           <AnimatePresence exitBeforeEnter>
             {active === 0 && (
