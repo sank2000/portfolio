@@ -68,11 +68,6 @@ export default function About({ page, setPage }: defaultProps) {
               <img src="/icons/logo white.svg" alt="logo" />I love working with
               people as a team and I am a good team player too
             </li>
-
-            <li>
-              <img src="/icons/logo white.svg" alt="logo" />I love to explore
-              new technologies and use them to solve real-life problems.
-            </li>
             <li>
               <img src="/icons/logo white.svg" alt="logo" />
               Ready to give a shot to everything, I wanted in life.
