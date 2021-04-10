@@ -84,7 +84,7 @@ export default function About({ page, setPage }: defaultProps) {
           </div>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1cR4-4cVQqnRJf6QqFGKyFDwQ2CeBnbUr/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Vf2E8M6a9DHQ07_4O4k4eR1dDdDaSpg2/view?usp=sharing"
           >
             CV
           </a>
