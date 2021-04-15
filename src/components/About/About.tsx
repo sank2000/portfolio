@@ -80,7 +80,7 @@ export default function About({ page, setPage }: defaultProps) {
         </div>
         <div className={classes.main__right}>
           <div>
-            <img src="/me.jpg" alt="me" />
+            <img src="/professional san darkbg.png" alt="me" />
           </div>
           <a
             target="_blank"
