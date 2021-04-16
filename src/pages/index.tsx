@@ -60,7 +60,7 @@ export default function Index() {
           content="san, sank2000,santhosh, portfolio, personal website, santhosh k"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="author" content="Santhosh K" />
       </Head>
