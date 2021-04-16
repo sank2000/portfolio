@@ -14,4 +14,14 @@ interface stackProps {
   backgroundColor: string;
 }
 
-export type { page, defaultProps, stackProps };
+interface experienceProps {
+  designation: string;
+  from: string;
+  to: string;
+  description: string;
+  company: string;
+  link: string;
+  stack: Array<string>;
+}
+
+export type { page, defaultProps, stackProps, experienceProps };

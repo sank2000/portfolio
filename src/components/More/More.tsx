@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 import { containerVariants } from '../../constants';
 
 import { defaultProps } from '../../types';
+import Skills from './Skills';
+import Contact from './Contact';
+import Experience from './Experience';
 
 export default function More({ page, setPage }: defaultProps) {
   return (
@@ -26,91 +29,19 @@ export default function More({ page, setPage }: defaultProps) {
           <div className={classes.head}>
             <h3>Skills</h3>
           </div>
-          <div className={classes.icon_container}>
-            <span className="icon-html5"></span>
-            <span className="icon-css3"></span>
-            <span className="icon-sass"></span>
-            <span className="icon-styled-components"></span>
-            <span className="icon-javascript"></span>
-            <span className="icon-typescript"></span>
-            <span className="icon-react"></span>
-            <span className="icon-next-dot-js"></span>
-            <span className="icon-redux"></span>
-            <span className="icon-figma"></span>
-            <span className="icon-node-dot-js"></span>
-            <span className="icon-express"></span>
-            <span className="icon-graphql"></span>
-            <span className="icon-apollo"></span>
-            <span className="icon-sequelize">
-              <span className="path1"></span>
-              <span className="path2"></span>
-              <span className="path3"></span>
-              <span className="path4"></span>
-              <span className="path5"></span>
-              <span className="path6"></span>
-              <span className="path7"></span>
-              <span className="path8"></span>
-              <span className="path9"></span>
-              <span className="path10"></span>
-              <span className="path11"></span>
-              <span className="path12"></span>
-              <span className="path13"></span>
-              <span className="path14"></span>
-              <span className="path15"></span>
-              <span className="path16"></span>
-              <span className="path17"></span>
-              <span className="path18"></span>
-              <span className="path19"></span>
-              <span className="path20"></span>
-              <span className="path21"></span>
-              <span className="path22"></span>
-              <span className="path23"></span>
-              <span className="path24"></span>
-              <span className="path25"></span>
-              <span className="path26"></span>
-              <span className="path27"></span>
-            </span>
+          <Skills />
+        </div>
+        <div className={classes.skills}>
+          <div className={classes.head}>
+            <h3>Experience</h3>
           </div>
-          <div className={classes.icon_container}>
-            <span className="icon-mongodb"></span>
-            <span className="icon-mysql"></span>
-            <span className="icon-postgresql"></span>
-            <span className="icon-firebase"></span>
-          </div>
-          <div className={classes.icon_container}>
-            <span className="icon-java"></span>
-            <span className="icon-python"></span>
-            <span className="icon-c"></span>
-            <span className="icon-cplusplus"></span>
-          </div>
+          <Experience />
         </div>
         <div className={classes.contact}>
           <div className={classes.head}>
             <h3>GET IN TOUCH</h3>
           </div>
-          <div>
-            <h4>
-              Wanna interact or work with me ? Drop a message .My inbox is
-              always open for you.
-            </h4>
-            <div className={classes.links}>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/santhosh-k-589203178/"
-              >
-                <span className="icon-linkedin"></span>
-              </a>
-              <a target="_blank" href="https://twitter.com/santhoshvelr">
-                <span className="icon-twitter"></span>
-              </a>
-              <a target="_blank" href="mailto:santhoshvelr@gmail.com">
-                <span className="icon-gmail"></span>
-              </a>
-              <a target="_blank" href="https://github.com/sank2000">
-                <span className="icon-github1"></span>
-              </a>
-            </div>
-          </div>
+          <Contact />
         </div>
       </main>
     </motion.div>
