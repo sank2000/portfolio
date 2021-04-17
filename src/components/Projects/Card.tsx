@@ -1,11 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { stackProps } from '../../types';
-import { motion } from 'framer-motion';
-
+import { stackProps } from 'types';
 import { cardVariants } from '../../constants';
 
 interface cardProps {

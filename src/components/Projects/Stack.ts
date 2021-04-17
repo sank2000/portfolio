@@ -1,4 +1,4 @@
-import { stackProps } from '../../types';
+import { stackProps } from 'types';
 
 const react: stackProps = {
   name: 'react',

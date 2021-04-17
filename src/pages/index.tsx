@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
-import { Home, About, Projects, More, Particles, Loader } from '../components';
 import { AnimatePresence } from 'framer-motion';
 
-import { page } from '../types';
+import { Home, About, Projects, More, Particles, Loader } from 'components';
+import { page } from 'types';
 
 export default function Index() {
   const [page, setPage] = useState<page>({

@@ -1,15 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
-import classes from './style.module.scss';
+import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 
+import classes from './style.module.scss';
+
 import { containerVariants } from '../../constants';
-
 import Card from './Card';
-import { AnimatePresence } from 'framer-motion';
-
 import { react, firebase, mongodb, nodejs, pwa } from './Stack';
-
-import { defaultProps } from '../../types';
+import { defaultProps } from 'types';
 
 export default function Projects({ page, setPage }: defaultProps) {
   const [exitLeft, setExitLeft] = useState(false);

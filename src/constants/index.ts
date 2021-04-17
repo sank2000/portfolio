@@ -1,3 +1,5 @@
-export { default as containerVariants } from './Variants/containerVariants';
-export { default as cardVariants } from './Variants/cardVariants';
-export { default as experience } from './experience';
+import containerVariants from './Variants/containerVariants';
+import cardVariants from './Variants/cardVariants';
+import experience from './experience';
+
+export { containerVariants, cardVariants, experience };

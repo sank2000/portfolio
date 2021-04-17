@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import classes from './style.module.scss';
 import { motion } from 'framer-motion';
 
-import { containerVariants } from '../../constants';
+import classes from './style.module.scss';
 
-import { defaultProps } from '../../types';
+import { containerVariants } from '../../constants';
+import { defaultProps } from 'types';
 
 export default function Home({ page, setPage }: defaultProps) {
   const [active, setActive] = useState(true);

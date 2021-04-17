@@ -1,4 +1,4 @@
-import { experienceProps } from '../types';
+import { experienceProps } from 'types';
 
 const experience: Array<experienceProps> = [
   {

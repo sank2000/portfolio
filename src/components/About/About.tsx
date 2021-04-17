@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import classes from './style.module.scss';
 import { motion } from 'framer-motion';
 
-import { containerVariants } from '../../constants';
+import classes from './style.module.scss';
 
-import { defaultProps } from '../../types';
+import { containerVariants } from '../../constants';
+import { defaultProps } from 'types';
 
 export default function About({ page, setPage }: defaultProps) {
   const [exitLeft, setExitLeft] = useState(false);

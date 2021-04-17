@@ -1,6 +1,7 @@
 import React from 'react';
-import classes from './style.module.scss';
 import { motion } from 'framer-motion';
+
+import classes from './style.module.scss';
 
 const pathVariants = {
   hidden: {
