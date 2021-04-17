@@ -30,7 +30,7 @@ export default function Home({ page, setPage }: defaultProps) {
     >
       <nav className={classes.nav}>
         <div className={classes.nav_brand}>
-          <img src="/icons/logo white.svg" alt="logo" />
+          <img src="/images/logo/logo white.svg" alt="logo" />
         </div>
         <ul className={classes.nav_links}>
           <li onClick={() => setPage({ no: 2, forward: true })}>About</li>

@@ -24,42 +24,42 @@ export default function Particle() {
             type: ['circle', 'image'],
             image: [
               {
-                src: '/react.svg',
+                src: '/images/stack/react.svg',
                 height: 24,
                 width: 24,
               },
               {
-                src: '/figma.svg',
+                src: '/images/stack/figma.svg',
                 height: 20,
                 width: 16,
               },
               {
-                src: '/mongodb.svg',
+                src: '/images/stack/mongodb.svg',
                 height: 20,
                 width: 23,
               },
               {
-                src: '/mysql.svg',
+                src: '/images/stack/mysql.svg',
                 height: 30,
                 width: 35,
               },
               {
-                src: '/next-dot-js.svg',
+                src: '/images/stack/next-dot-js.svg',
                 height: 25,
                 width: 25,
               },
               {
-                src: '/typescript.svg',
+                src: '/images/stack/typescript.svg',
                 height: 20,
                 width: 20,
               },
               {
-                src: '/nodejs.svg',
+                src: '/images/stack/nodejs.svg',
                 height: 25,
                 width: 25,
               },
               {
-                src: '/graphql.svg',
+                src: '/images/stack/graphql.svg',
                 height: 25,
                 width: 25,
               },

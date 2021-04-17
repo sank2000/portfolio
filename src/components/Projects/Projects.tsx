@@ -126,7 +126,7 @@ export default function Projects({ page, setPage }: defaultProps) {
                 <Card
                   key="nviktous"
                   name="nviktous"
-                  image="/nviktous.png"
+                  image="/images/projects/nviktous.png"
                   description="It is completely packed E-Commerce site with options like OAuth, OTP etc. which is build using MERN stack.It also contains admin panel where the seller
                         can handle the sales process"
                   stack={[react, nodejs, mongodb, firebase]}
@@ -138,7 +138,7 @@ export default function Projects({ page, setPage }: defaultProps) {
                 <Card
                   key="college mate"
                   name="college mate"
-                  image="/collegemate.png"
+                  image="/images/projects/collegemate.png"
                   description="A MERN stack Progressive Web App (PWA) built for students and teaching faculties to easily share materials, homework, assignments, and notes."
                   stack={[react, nodejs, mongodb, firebase, pwa]}
                   link="https://collegemate.herokuapp.com/"
@@ -149,7 +149,7 @@ export default function Projects({ page, setPage }: defaultProps) {
                 <Card
                   key="biller"
                   name="biller"
-                  image="/biller.png"
+                  image="/images/projects/biller.png"
                   description=" It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe."
                   stack={[react, nodejs, mongodb]}
                   link="https://san-biller.herokuapp.com/"
@@ -160,7 +160,7 @@ export default function Projects({ page, setPage }: defaultProps) {
                 <Card
                   key="aubit"
                   name="aubit"
-                  image="/aubit.png"
+                  image="/images/projects/aubit.png"
                   description="The unofficial website of University College of Engineering, BIT Campus, Tiruchirappalli. The website is still under development and will be approved upon completion to be the official website. Built with React."
                   stack={[react, nodejs]}
                   link="https://aubit.netlify.app/"

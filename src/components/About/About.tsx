@@ -44,7 +44,7 @@ export default function About({ page, setPage }: defaultProps) {
         <div className={classes.main__left}>
           <div>
             <h2>Hi</h2>
-            <img src="/hi.gif" alt="hi" />
+            <img src="/images/hi.gif" alt="hi" />
           </div>
 
           <h3>
@@ -56,31 +56,31 @@ export default function About({ page, setPage }: defaultProps) {
 
           <ul>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I am from the
+              <img src="/images/logo/logo white.svg" alt="logo" />I am from the
               so-called "Mango City", Salem.
             </li>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I am passionate
-              about coding & designing, inquisitive in exploring new
+              <img src="/images/logo/logo white.svg" alt="logo" />I am
+              passionate about coding & designing, inquisitive in exploring new
               technologies to solve real-life problems
             </li>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I love working with
-              people as a team and I am a good team player too
+              <img src="/images/logo/logo white.svg" alt="logo" />I love working
+              with people as a team and I am a good team player too
             </li>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />
+              <img src="/images/logo/logo white.svg" alt="logo" />
               Ready to give a shot to everything, I wanted in life.
             </li>
             <li>
-              <img src="/icons/logo white.svg" alt="logo" />I spend my free time
-              scrolling social media, listening to songs, and dancing.
+              <img src="/images/logo/logo white.svg" alt="logo" />I spend my
+              free time scrolling social media, listening to songs, and dancing.
             </li>
           </ul>
         </div>
         <div className={classes.main__right}>
           <div>
-            <img src="/professional san darkbg.png" alt="me" />
+            <img src="/images/professional san darkbg.png" alt="me" />
           </div>
           <a
             target="_blank"
