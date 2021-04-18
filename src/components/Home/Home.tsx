@@ -39,8 +39,8 @@ export default function Home({ page, setPage }: defaultProps) {
         </ul>
       </nav>
       <main className={classes.main}>
-        <h2>Hi there. I'm </h2>
-        <h1>SAN</h1>
+        <h1>Hi there. I'm </h1>
+        <h2>SAN</h2>
       </main>
       <footer className={classes.footer}>
         <motion.span

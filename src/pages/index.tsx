@@ -13,6 +13,7 @@ export default function Index() {
   const [loader, setLoader] = useState(true);
 
   useEffect(() => {
+    document.documentElement.lang = 'en-us';
     setTimeout(() => {
       setLoader(false);
     }, 3500);
@@ -46,6 +47,7 @@ export default function Index() {
           color="#5bbad5"
         />
         <link rel="shortcut icon" href="/ico/favicon.ico" />
+
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="/ico/browserconfig.xml" />
         <meta name="theme-color" content="#252a34" />
