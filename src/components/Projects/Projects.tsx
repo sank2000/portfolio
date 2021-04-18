@@ -15,11 +15,12 @@ export default function Projects({ page, setPage }: defaultProps) {
   const [active, setActive] = useState(0);
   const [show, setShow] = useState(false);
   const intervalRef = useRef<any>(null);
+  const PROJECT_COUNT = 4;
 
   const setCurrent = () => {
     intervalRef.current = setInterval(() => {
       setActive((old: number) => {
-        old = (old + 1) % 4;
+        old = (old + 1) % PROJECT_COUNT;
         return old;
       });
     }, 5000);
@@ -76,42 +77,20 @@ export default function Projects({ page, setPage }: defaultProps) {
       </nav>
       <main className={classes.main}>
         <div className={classes.slider_dot_container}>
-          <div
-            onClick={() => handleClick(0)}
-            style={{
-              backgroundColor: active === 0 ? '#fff' : 'rgb(187, 187, 187)',
-              transform: active === 0 ? 'scale(1.2)' : 'scale(1)',
-            }}
-          >
-            &nbsp;
-          </div>
-          <div
-            onClick={() => handleClick(1)}
-            style={{
-              backgroundColor: active === 1 ? '#fff' : 'rgb(187, 187, 187)',
-              transform: active === 1 ? 'scale(1.2)' : 'scale(1)',
-            }}
-          >
-            &nbsp;
-          </div>
-          <div
-            onClick={() => handleClick(2)}
-            style={{
-              backgroundColor: active === 2 ? '#fff' : 'rgb(187, 187, 187)',
-              transform: active === 2 ? 'scale(1.2)' : 'scale(1)',
-            }}
-          >
-            &nbsp;
-          </div>
-          <div
-            onClick={() => handleClick(3)}
-            style={{
-              backgroundColor: active === 3 ? '#fff' : 'rgb(187, 187, 187)',
-              transform: active === 3 ? 'scale(1.2)' : 'scale(1)',
-            }}
-          >
-            &nbsp;
-          </div>
+          {[...Array(PROJECT_COUNT)].map((_, ind) => {
+            return (
+              <div
+                onClick={() => handleClick(ind)}
+                style={{
+                  backgroundColor:
+                    active === ind ? '#fff' : 'rgb(187, 187, 187)',
+                  transform: active === ind ? 'scale(1.2)' : 'scale(1)',
+                }}
+              >
+                &nbsp;
+              </div>
+            );
+          })}
         </div>
         {show && (
           <div

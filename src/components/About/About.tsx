@@ -9,6 +9,14 @@ import { defaultProps } from 'types';
 export default function About({ page, setPage }: defaultProps) {
   const [exitLeft, setExitLeft] = useState(false);
 
+  const points = [
+    'I am from the so-called "Mango City", Salem.',
+    'I am passionate about coding & designing, inquisitive in exploring new technologies to solve real-life problems',
+    'I love working with people as a team and I am a good team player too',
+    'Ready to give a shot to everything, I wanted in life.',
+    'I spend my free time scrolling social media, listening to songs, and dancing.',
+  ];
+
   return (
     <motion.div
       key="about"
@@ -55,27 +63,14 @@ export default function About({ page, setPage }: defaultProps) {
           </h3>
 
           <ul>
-            <li>
-              <img src="/images/logo/logo white.svg" alt="logo" />I am from the
-              so-called "Mango City", Salem.
-            </li>
-            <li>
-              <img src="/images/logo/logo white.svg" alt="logo" />I am
-              passionate about coding & designing, inquisitive in exploring new
-              technologies to solve real-life problems
-            </li>
-            <li>
-              <img src="/images/logo/logo white.svg" alt="logo" />I love working
-              with people as a team and I am a good team player too
-            </li>
-            <li>
-              <img src="/images/logo/logo white.svg" alt="logo" />
-              Ready to give a shot to everything, I wanted in life.
-            </li>
-            <li>
-              <img src="/images/logo/logo white.svg" alt="logo" />I spend my
-              free time scrolling social media, listening to songs, and dancing.
-            </li>
+            {points.map((point, ind) => {
+              return (
+                <li key={ind}>
+                  <img src="/images/logo/logo white.svg" alt="logo" />
+                  {point}
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={classes.main__right}>

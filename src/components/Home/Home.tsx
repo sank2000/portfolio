@@ -57,26 +57,24 @@ export default function Home({ page, setPage }: defaultProps) {
         ></motion.span>
       </footer>
       <h3>
-        {['F', 'U', 'L', 'L ', 'S', 'T', 'A', 'C', 'K ', 'D', 'E', 'V'].map(
-          (val, ind) => {
-            return (
-              <span
-                key={ind}
-                style={{
-                  color: active
-                    ? ind % 2 === 0
-                      ? '#fff'
-                      : 'rgba(255, 255, 255, 0.2)'
-                    : ind % 2 !== 0
+        {Array.from('FULL STACK DEV').map((val, ind) => {
+          return (
+            <span
+              key={ind}
+              style={{
+                color: active
+                  ? ind % 2 === 0
                     ? '#fff'
-                    : 'rgba(255, 255, 255, 0.2)',
-                }}
-              >
-                {val}
-              </span>
-            );
-          }
-        )}
+                    : 'rgba(255, 255, 255, 0.2)'
+                  : ind % 2 !== 0
+                  ? '#fff'
+                  : 'rgba(255, 255, 255, 0.2)',
+              }}
+            >
+              {val}
+            </span>
+          );
+        })}
       </h3>
     </motion.div>
   );
