@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import classes from './style.module.scss';
 
 import { stackProps } from 'types';
-import { cardVariants } from '../../constants';
+import { cardVariants } from '@/constants';
 
 interface cardProps {
   name: string;

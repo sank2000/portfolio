@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import classes from './style.module.scss';
 
-import { experience } from '../../constants';
+import { experience } from '@/constants';
 import { experienceProps } from 'types';
 
 export default function Experience() {

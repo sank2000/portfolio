@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { containerVariants } from '../../constants';
+import { containerVariants } from '@/constants';
 import { defaultProps } from 'types';
 import Skills from './Skills';
 import Contact from './Contact';

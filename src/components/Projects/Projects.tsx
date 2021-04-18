@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { containerVariants } from '../../constants';
+import { containerVariants } from '@/constants';
 import Card from './Card';
 import { react, firebase, mongodb, nodejs, pwa } from './Stack';
 import { defaultProps } from 'types';
