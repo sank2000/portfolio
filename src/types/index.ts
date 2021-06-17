@@ -8,6 +8,17 @@ interface defaultProps {
   page: page;
 }
 
+interface withAdditionalProps extends defaultProps {
+  exitLeft: {
+    status: boolean;
+  };
+  setExitLeft: React.Dispatch<
+    React.SetStateAction<{
+      status: boolean;
+    }>
+  >;
+}
+
 interface stackProps {
   name: string;
   color: string;
@@ -24,4 +35,10 @@ interface experienceProps {
   stack: Array<string>;
 }
 
-export type { page, defaultProps, stackProps, experienceProps };
+export type {
+  page,
+  defaultProps,
+  stackProps,
+  experienceProps,
+  withAdditionalProps,
+};

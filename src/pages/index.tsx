@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { useSwipeable } from 'react-swipeable';
 
 import {
   Home,
@@ -17,7 +18,11 @@ export default function Index() {
     no: 1,
     forward: true,
   });
+  const [exitLeft, setExitLeft] = useState({
+    status: true,
+  });
   const [loader, setLoader] = useState(true);
+  const initialRef = useRef(false);
 
   useEffect(() => {
     document.documentElement.lang = 'en-us';
@@ -26,20 +31,76 @@ export default function Index() {
     }, 3500);
   }, []);
 
+  useEffect(() => {
+    if (initialRef.current) {
+      setPage((old) => ({
+        forward: !exitLeft.status,
+        no: exitLeft.status ? old.no - 1 : old.no + 1,
+      }));
+    } else {
+      initialRef.current = true;
+    }
+  }, [exitLeft]);
+
+  const handlers = useSwipeable({
+    onSwipedLeft: (eventData) => {
+      if (page.no === 2 || page.no === 3) {
+        return setExitLeft({
+          status: true,
+        });
+      }
+      setPage((old) => {
+        if (old.no === 1) {
+          return old;
+        }
+        return {
+          forward: false,
+          no: old.no - 1,
+        };
+      });
+    },
+    onSwipedRight: (eventData) => {
+      if (page.no === 2 || page.no === 3) {
+        return setExitLeft({
+          status: false,
+        });
+      }
+      setPage((old) => {
+        if (old.no === 4) {
+          return old;
+        }
+        return {
+          forward: true,
+          no: old.no + 1,
+        };
+      });
+    },
+  });
+
   return (
     <>
       <CustomHead />
       <>
         {loader && <Loader />}
-        <section className="section">
+        <section className="section" {...handlers}>
           <Particles />
           <AnimatePresence exitBeforeEnter>
             {page.no === 1 && <Home page={page} setPage={setPage} key="home" />}
             {page.no === 2 && (
-              <About page={page} setPage={setPage} key="about" />
+              <About
+                page={page}
+                setPage={setPage}
+                {...{ exitLeft, setExitLeft }}
+                key="about"
+              />
             )}
             {page.no === 3 && (
-              <Projects page={page} setPage={setPage} key="projects" />
+              <Projects
+                page={page}
+                setPage={setPage}
+                {...{ exitLeft, setExitLeft }}
+                key="projects"
+              />
             )}
             {page.no === 4 && <More page={page} setPage={setPage} key="more" />}
           </AnimatePresence>

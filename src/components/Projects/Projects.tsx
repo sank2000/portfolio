@@ -7,11 +7,13 @@ import classes from './style.module.scss';
 import { containerVariants } from '@/constants';
 import Card from './Card';
 import { react, firebase, mongodb, nodejs, pwa } from './Stack';
-import { defaultProps } from 'types';
+import { withAdditionalProps } from 'types';
 
-export default function Projects({ page, setPage }: defaultProps) {
-  const [exitLeft, setExitLeft] = useState(false);
-
+export default function Projects({
+  page,
+  exitLeft,
+  setExitLeft,
+}: withAdditionalProps) {
   const [active, setActive] = useState(0);
   const [show, setShow] = useState(false);
   const intervalRef = useRef<any>(null);
@@ -51,20 +53,25 @@ export default function Projects({ page, setPage }: defaultProps) {
       variants={containerVariants}
       initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit={exitLeft ? 'exitLeft' : 'exitRight'}
+      exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
     >
       <nav className={classes.nav}>
         <span
           className="icon-arrow"
           onClick={() => {
-            setExitLeft(true);
-            setPage({ no: 2, forward: false });
+            setExitLeft({
+              status: true,
+            });
           }}
         ></span>
         <h3 className={classes.nav_head}>Projects</h3>
         <motion.span
           className="icon-arrow"
-          onClick={() => setPage({ no: 4, forward: true })}
+          onClick={() =>
+            setExitLeft({
+              status: false,
+            })
+          }
           animate={{
             scale: [1, 1.3, 1, 1.3, 1],
             rotate: [90, 90, 90, 90, 90],

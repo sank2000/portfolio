@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
 import { containerVariants } from '@/constants';
-import { defaultProps } from 'types';
+import { withAdditionalProps } from 'types';
 
-export default function About({ page, setPage }: defaultProps) {
-  const [exitLeft, setExitLeft] = useState(false);
-
+export default function About({
+  page,
+  exitLeft,
+  setExitLeft,
+}: withAdditionalProps) {
   const points = [
     'I am from the so-called "Mango City", Salem.',
     'I am passionate about coding & designing, inquisitive in exploring new technologies to solve real-life problems',
@@ -23,20 +25,25 @@ export default function About({ page, setPage }: defaultProps) {
       variants={containerVariants}
       initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit={exitLeft ? 'exitLeft' : 'exitRight'}
+      exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
     >
       <nav className={classes.nav}>
         <span
           className="icon-arrow"
           onClick={() => {
-            setExitLeft(true);
-            setPage({ no: 1, forward: false });
+            setExitLeft({
+              status: true,
+            });
           }}
         ></span>
         <h3 className={classes.nav_head}>About</h3>
         <motion.span
           className="icon-arrow"
-          onClick={() => setPage({ no: 3, forward: true })}
+          onClick={() => {
+            setExitLeft({
+              status: false,
+            });
+          }}
           animate={{
             scale: [1, 1.3, 1, 1.3, 1],
             rotate: [90, 90, 90, 90, 90],
