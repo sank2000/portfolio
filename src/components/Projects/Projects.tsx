@@ -88,6 +88,7 @@ export default function Projects({
             return (
               <div
                 onClick={() => handleClick(ind)}
+                key={ind}
                 style={{
                   backgroundColor:
                     active === ind ? '#fff' : 'rgb(187, 187, 187)',
