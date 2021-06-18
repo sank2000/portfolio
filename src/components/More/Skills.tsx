@@ -49,6 +49,8 @@ export default function Skills() {
           <span className="path26"></span>
           <span className="path27"></span>
         </span>
+        <span className="icon-jest"></span>
+        <span className="icon-docker"></span>
       </div>
       <div className={classes.icon_container}>
         <span className="icon-mongodb"></span>
