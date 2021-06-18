@@ -117,6 +117,21 @@
       animation: grow 1.5s linear 0.5s, blink 2s linear infinite alternate;
     }
   }
+
+  &_brand {
+    display: none;
+
+    @media (max-width: 450px) {
+      width: 25%;
+      display: block;
+      margin-bottom: 7rem;
+
+      img {
+        width: 100%;
+        filter: opacity(25%);
+      }
+    }
+  }
 }
 
 .footer {

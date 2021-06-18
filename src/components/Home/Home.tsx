@@ -39,6 +39,9 @@ export default function Home({ page, setPage }: defaultProps) {
         </ul>
       </nav>
       <main className={classes.main}>
+        <div className={classes.main_brand}>
+          <img src="/images/logo/logo white.svg" alt="logo" />
+        </div>
         <h1>Hi there. I'm </h1>
         <h2>SAN</h2>
       </main>
