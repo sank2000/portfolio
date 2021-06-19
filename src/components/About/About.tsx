@@ -86,7 +86,7 @@ export default function About({
           </div>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Vf2E8M6a9DHQ07_4O4k4eR1dDdDaSpg2/view?usp=sharing"
+            href="https://drive.google.com/file/d/1yJKO8J9rYKVmrRLTG3kuaAkv64b3mpLK/view?usp=sharing"
           >
             CV
           </a>
