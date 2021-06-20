@@ -21,7 +21,7 @@ export default function More({ page, setPage }: defaultProps) {
       <nav className={classes.nav}>
         <span
           className="icon-arrow"
-          onClick={() => setPage({ no: 3, forward: false })}
+          onClick={() => setPage((old) => ({ no: old.no - 1, forward: false }))}
         ></span>
       </nav>
       <main className={classes.main}>

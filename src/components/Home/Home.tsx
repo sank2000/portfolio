@@ -48,7 +48,7 @@ export default function Home({ page, setPage }: defaultProps) {
       <footer className={classes.footer}>
         <motion.span
           className="icon-arrow"
-          onClick={() => setPage({ no: 2, forward: true })}
+          onClick={() => setPage((old) => ({ no: old.no + 1, forward: true }))}
           animate={{
             scale: [1, 1.3, 1, 1.3, 1],
             rotate: [90, 90, 90, 90, 90],
