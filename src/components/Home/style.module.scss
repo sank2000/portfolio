@@ -38,6 +38,10 @@
   display: flex;
   align-items: center;
 
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+  }
+
   .nav_brand {
     font-family: $font-family-special;
     flex-grow: 1;
@@ -46,7 +50,7 @@
       width: 6rem;
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       display: none;
     }
   }
@@ -56,10 +60,14 @@
     list-style: none;
     display: flex;
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       font-size: 2rem;
       flex-basis: 100%;
       justify-content: space-between;
+    }
+
+    @media (max-width: 310px) {
+      flex-wrap: wrap;
     }
 
     li {
@@ -131,7 +139,7 @@
   &_brand {
     display: none;
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
       width: 25%;
       display: block;
       margin-bottom: 7rem;
