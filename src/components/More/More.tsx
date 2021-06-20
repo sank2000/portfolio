@@ -31,12 +31,6 @@ export default function More({ page, setPage }: defaultProps) {
           </div>
           <Skills />
         </div>
-        <div className={classes.skills}>
-          <div className={classes.head}>
-            <h3>Experience</h3>
-          </div>
-          <Experience />
-        </div>
         <div className={classes.contact}>
           <div className={classes.head}>
             <h3>GET IN TOUCH</h3>

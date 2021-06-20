@@ -5,6 +5,7 @@ import { useSwipeable } from 'react-swipeable';
 import {
   Home,
   About,
+  Experience,
   Projects,
   More,
   Particles,
@@ -44,7 +45,7 @@ export default function Index() {
 
   const handlers = useSwipeable({
     onSwipedLeft: (eventData) => {
-      if (page.no === 2 || page.no === 3) {
+      if (page.no !== 1 && page.no !== 5) {
         return setExitLeft({
           status: true,
         });
@@ -60,13 +61,13 @@ export default function Index() {
       });
     },
     onSwipedRight: (eventData) => {
-      if (page.no === 2 || page.no === 3) {
+      if (page.no !== 1 && page.no !== 5) {
         return setExitLeft({
           status: false,
         });
       }
       setPage((old) => {
-        if (old.no === 4) {
+        if (old.no === 5) {
           return old;
         }
         return {
@@ -93,12 +94,18 @@ export default function Index() {
               />
             )}
             {page.no === 3 && (
+              <Experience
+                {...{ exitLeft, setExitLeft, page, setPage }}
+                key="experience"
+              />
+            )}
+            {page.no === 4 && (
               <Projects
                 {...{ exitLeft, setExitLeft, page, setPage }}
                 key="projects"
               />
             )}
-            {page.no === 4 && <More {...{ page, setPage }} key="more" />}
+            {page.no === 5 && <More {...{ page, setPage }} key="more" />}
           </AnimatePresence>
         </section>
       </>
