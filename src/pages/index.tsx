@@ -25,6 +25,9 @@ export default function Index() {
   const [loader, setLoader] = useState(true);
   const initialRef = useRef(false);
 
+  const FIRST_PAGE = 1;
+  const LAST_PAGE = 5;
+
   useEffect(() => {
     document.documentElement.lang = 'en-us';
     setTimeout(() => {
@@ -45,13 +48,13 @@ export default function Index() {
 
   const handlers = useSwipeable({
     onSwipedLeft: (eventData) => {
-      if (page.no !== 1 && page.no !== 5) {
+      if (page.no !== FIRST_PAGE && page.no !== LAST_PAGE) {
         return setExitLeft({
           status: true,
         });
       }
       setPage((old) => {
-        if (old.no === 1) {
+        if (old.no === FIRST_PAGE) {
           return old;
         }
         return {
@@ -61,13 +64,13 @@ export default function Index() {
       });
     },
     onSwipedRight: (eventData) => {
-      if (page.no !== 1 && page.no !== 5) {
+      if (page.no !== FIRST_PAGE && page.no !== LAST_PAGE) {
         return setExitLeft({
           status: false,
         });
       }
       setPage((old) => {
-        if (old.no === 5) {
+        if (old.no === LAST_PAGE) {
           return old;
         }
         return {
