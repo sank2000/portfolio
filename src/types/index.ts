@@ -33,6 +33,7 @@ interface experienceProps {
   company: string;
   link: string;
   stack: Array<string>;
+  forward: boolean;
 }
 
 export type {

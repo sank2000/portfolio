@@ -14,6 +14,7 @@ export default function Card({
   company,
   link,
   stack,
+  forward,
 }: experienceProps) {
   const [icon, setIcon] = useState(stack ? stack[0] : '');
   const intervalRef = useRef<any>();
@@ -39,9 +40,9 @@ export default function Card({
   return (
     <motion.div
       variants={containerVariants}
-      initial="hiddenLeft"
+      initial={forward ? 'hiddenLeft' : 'hiddenRight'}
       animate="visible"
-      exit="exitRight"
+      exit={forward ? 'exitRight' : 'exitLeft'}
       className={classes.experience__container}
       key={`${from}-${company}`}
     >

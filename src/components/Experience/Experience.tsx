@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import classes from './style.module.scss';
@@ -13,7 +13,9 @@ export default function Experience({
   setExitLeft,
 }: withAdditionalProps) {
   const [experiencePage, setExperiencePage] = useState(1);
+  const [animateForward, setAnimateForward] = useState({ value: true });
   const [show, setShow] = useState(false);
+  const initialRef = useRef(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -24,6 +26,18 @@ export default function Experience({
       clearTimeout(timeout);
     };
   }, []);
+
+  useEffect(() => {
+    if (initialRef.current) {
+      if (animateForward.value) {
+        setExperiencePage((old) => old + 1);
+      } else {
+        setExperiencePage((old) => old - 1);
+      }
+    } else {
+      initialRef.current = true;
+    }
+  }, [animateForward]);
 
   return (
     <motion.div
@@ -71,6 +85,7 @@ export default function Experience({
                   return (
                     <Card
                       {...data}
+                      forward={animateForward.value}
                       key={`${data.company}-${ind}-${experiencePage}`}
                     />
                   );
@@ -83,7 +98,7 @@ export default function Experience({
                 className="icon-arrow-left-circle"
                 onClick={() => {
                   if (experiencePage === 1) return;
-                  setExperiencePage((old) => old - 1);
+                  setAnimateForward({ value: false });
                 }}
               ></span>
             )}
@@ -92,7 +107,7 @@ export default function Experience({
                 className="icon-arrow-right-circle"
                 onClick={() => {
                   if (experience.length <= experiencePage * 2) return;
-                  setExperiencePage((old) => old + 1);
+                  setAnimateForward({ value: true });
                 }}
               ></span>
             )}
