@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
 import { experienceProps } from 'types';
+import { containerVariants } from '@/constants';
 
 export default function Card({
   designation,
@@ -35,7 +37,14 @@ export default function Card({
   }, [stack]);
 
   return (
-    <div className={classes.experience__container} key={`${from}-${company}`}>
+    <motion.div
+      variants={containerVariants}
+      initial="hiddenLeft"
+      animate="visible"
+      exit="exitRight"
+      className={classes.experience__container}
+      key={`${from}-${company}`}
+    >
       <div className={classes.left__container}>
         <p>{from}</p>
         <div className={classes.icon__container}>
@@ -50,6 +59,6 @@ export default function Card({
         </h6>
         <p>{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

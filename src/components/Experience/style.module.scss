@@ -29,6 +29,7 @@
 .main {
   min-height: 80vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
@@ -113,6 +114,22 @@
     letter-spacing: 0px;
     cursor: pointer;
     transform: rotate(90deg);
+
+    &::after,
+    &::before {
+      cursor: pointer;
+    }
+  }
+}
+
+.page_nav {
+  span {
+    font-size: 4rem;
+    display: inline-block;
+    color: rgb(187, 187, 187);
+    letter-spacing: 0px;
+    cursor: pointer;
+    margin: 0.5em;
 
     &::after,
     &::before {
