@@ -65,8 +65,8 @@ export default function About({
           <h3>
             I am <span className={classes.name}>Santhosh</span> shortly{' '}
             <span className={classes.short_name}>San </span>
-            doing my bachelor's degree in University College of Engineering,
-            Trichy
+            doing my bachelor&apos;s degree in University College of
+            Engineering, Trichy
           </h3>
 
           <ul>
@@ -86,6 +86,7 @@ export default function About({
           </div>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://drive.google.com/file/d/1yJKO8J9rYKVmrRLTG3kuaAkv64b3mpLK/view?usp=sharing"
           >
             CV

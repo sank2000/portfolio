@@ -43,7 +43,7 @@ export default function Home({ page, setPage }: defaultProps) {
         <div className={classes.main_brand}>
           <img src="/images/logo/logo white.svg" alt="logo" />
         </div>
-        <h1>Hi there. I'm </h1>
+        <h1>Hi there. I&apos;m </h1>
         <h2>SAN</h2>
       </main>
       <footer className={classes.footer}>

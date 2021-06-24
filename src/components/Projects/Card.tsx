@@ -42,7 +42,7 @@ export default function Card({
       <div className={classes.card_right}>
         <h3>{description}</h3>
         <div className={classes.card_btn}>
-          <a target="_blank" href={link}>
+          <a target="_blank" rel="noreferrer" href={link}>
             LIVE DEMO
           </a>
           {github !== null && <a href={github}>GITHUB</a>}

@@ -84,6 +84,7 @@ export default function Index() {
     return () => {
       window.removeEventListener('keydown', handler);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   useEffect(() => {
