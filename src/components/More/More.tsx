@@ -7,7 +7,6 @@ import { containerVariants } from '@/constants';
 import { defaultProps } from 'types';
 import Skills from './Skills';
 import Contact from './Contact';
-import Experience from './Experience';
 
 export default function More({ page, setPage }: defaultProps) {
   return (
