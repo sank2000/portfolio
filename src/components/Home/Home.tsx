@@ -51,7 +51,7 @@ export default function Home({
         <h2>SAN</h2>
       </main>
       <footer className={classes.footer}>
-        <motion.span
+        <motion.button
           className="icon-arrow"
           onClick={() =>
             setExitLeft({
@@ -66,7 +66,7 @@ export default function Home({
               duration: 2,
             },
           }}
-        ></motion.span>
+        ></motion.button>
       </footer>
       <h3>
         {Array.from('FULL STACK DEV').map((val, ind) => {

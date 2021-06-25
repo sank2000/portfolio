@@ -18,10 +18,10 @@ export default function More({ page, setExitLeft }: withAdditionalProps) {
       exit="exitLeft"
     >
       <nav className={classes.nav}>
-        <span
+        <button
           className="icon-arrow"
           onClick={() => setExitLeft({ status: true })}
-        ></span>
+        ></button>
       </nav>
       <main className={classes.main}>
         <div className={classes.skills}>

@@ -153,10 +153,12 @@
 }
 
 .footer {
-  span {
+  button {
     font-size: 4rem;
     margin-bottom: 2rem;
     display: inline-block;
+    border: none;
+    background-color: transparent;
     color: rgb(187, 187, 187);
     letter-spacing: 0px;
     cursor: pointer;

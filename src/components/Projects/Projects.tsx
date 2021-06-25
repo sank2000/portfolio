@@ -56,16 +56,16 @@ export default function Projects({
       exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
     >
       <nav className={classes.nav}>
-        <span
+        <button
           className="icon-arrow"
           onClick={() => {
             setExitLeft({
               status: true,
             });
           }}
-        ></span>
+        ></button>
         <h3 className={classes.nav_head}>Projects</h3>
-        <motion.span
+        <motion.button
           className="icon-arrow"
           onClick={() =>
             setExitLeft({
@@ -80,7 +80,7 @@ export default function Projects({
               duration: 2,
             },
           }}
-        ></motion.span>
+        ></motion.button>
       </nav>
       <main className={classes.main}>
         <div className={classes.slider_dot_container}>

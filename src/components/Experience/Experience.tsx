@@ -48,16 +48,16 @@ export default function Experience({
       exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
     >
       <nav className={classes.nav}>
-        <span
+        <button
           className="icon-arrow"
           onClick={() => {
             setExitLeft({
               status: true,
             });
           }}
-        ></span>
+        ></button>
         <h3 className={classes.nav_head}>Experience</h3>
-        <motion.span
+        <motion.button
           className="icon-arrow"
           onClick={() => {
             setExitLeft({
@@ -72,7 +72,7 @@ export default function Experience({
               duration: 2,
             },
           }}
-        ></motion.span>
+        ></motion.button>
       </nav>
 
       {show && (
@@ -94,22 +94,22 @@ export default function Experience({
           </div>
           <div className={classes.page_nav}>
             {experiencePage != 1 && (
-              <span
+              <button
                 className="icon-arrow-left-circle"
                 onClick={() => {
                   if (experiencePage === 1) return;
                   setAnimateForward({ value: false });
                 }}
-              ></span>
+              ></button>
             )}
             {!(experience.length <= experiencePage * 2) && (
-              <span
+              <button
                 className="icon-arrow-right-circle"
                 onClick={() => {
                   if (experience.length <= experiencePage * 2) return;
                   setAnimateForward({ value: true });
                 }}
-              ></span>
+              ></button>
             )}
           </div>
         </main>
