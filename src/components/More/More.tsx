@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import classes from './style.module.scss';
 
 import { containerVariants } from '@/constants';
-import { defaultProps } from 'types';
+import { withAdditionalProps } from 'types';
 import Skills from './Skills';
 import Contact from './Contact';
 
-export default function More({ page, setPage }: defaultProps) {
+export default function More({ page, setExitLeft }: withAdditionalProps) {
   return (
     <motion.div
       key="more"
@@ -20,7 +20,7 @@ export default function More({ page, setPage }: defaultProps) {
       <nav className={classes.nav}>
         <span
           className="icon-arrow"
-          onClick={() => setPage((old) => ({ no: old.no - 1, forward: false }))}
+          onClick={() => setExitLeft({ status: true })}
         ></span>
       </nav>
       <main className={classes.main}>

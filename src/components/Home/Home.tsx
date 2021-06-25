@@ -4,9 +4,13 @@ import { motion } from 'framer-motion';
 import classes from './style.module.scss';
 
 import { containerVariants } from '@/constants';
-import { defaultProps } from 'types';
+import { withAdditionalProps } from 'types';
 
-export default function Home({ page, setPage }: defaultProps) {
+export default function Home({
+  page,
+  setPage,
+  setExitLeft,
+}: withAdditionalProps) {
   const [active, setActive] = useState(true);
 
   useEffect(() => {
@@ -49,7 +53,11 @@ export default function Home({ page, setPage }: defaultProps) {
       <footer className={classes.footer}>
         <motion.span
           className="icon-arrow"
-          onClick={() => setPage((old) => ({ no: old.no + 1, forward: true }))}
+          onClick={() =>
+            setExitLeft({
+              status: false,
+            })
+          }
           animate={{
             scale: [1, 1.3, 1, 1.3, 1],
             rotate: [90, 90, 90, 90, 90],
