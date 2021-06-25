@@ -72,10 +72,10 @@ export default function Index() {
 
   useEffect(() => {
     function handler(event) {
-      const key = event.key; // "ArrowRight", "ArrowLeft"
-      if (key === 'ArrowRight') {
+      const key = event.key;
+      if (['ArrowRight', 'Enter', 'a'].includes(key)) {
         handleRight();
-      } else if (key === 'ArrowLeft') {
+      } else if (['ArrowLeft', 'Backspace', 'd'].includes(key)) {
         handleLeft();
       }
     }
