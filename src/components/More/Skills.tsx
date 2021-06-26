@@ -13,10 +13,10 @@ export default function Skills() {
         <Skill icon="icon-javascript"></Skill>
         <Skill icon="icon-typescript"></Skill>
         <Skill icon="icon-react"></Skill>
-        <Skill icon="icon-next-dot-js"></Skill>
+        <Skill icon="icon-next-dot-js" title="next.js"></Skill>
         <Skill icon="icon-redux"></Skill>
         <Skill icon="icon-figma"></Skill>
-        <Skill icon="icon-node-dot-js"></Skill>
+        <Skill icon="icon-node-dot-js" title="node.js"></Skill>
         <Skill icon="icon-express"></Skill>
         <Skill icon="icon-graphql"></Skill>
         <Skill icon="icon-apollo"></Skill>
@@ -62,7 +62,7 @@ export default function Skills() {
         <Skill icon="icon-java"></Skill>
         <Skill icon="icon-python"></Skill>
         <Skill icon="icon-c"></Skill>
-        <Skill icon="icon-cplusplus"></Skill>
+        <Skill icon="icon-cplusplus" title="C++"></Skill>
       </div>
     </>
   );
@@ -80,7 +80,9 @@ function Skill({
   return (
     <span className={icon}>
       {children && children}
-      {title && <span>{title}</span>}
+      <span className={classes.description}>
+        {title ?? icon.split('-').slice(1).join(' ').replace('dot', '')}
+      </span>
     </span>
   );
 }
