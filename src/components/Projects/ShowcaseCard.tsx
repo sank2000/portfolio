@@ -4,17 +4,8 @@ import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { stackProps } from 'types';
+import { projectProps } from 'types';
 import { cardVariants } from '@/constants';
-
-interface cardProps {
-  name: string;
-  image: string;
-  description: String;
-  stack: Array<stackProps>;
-  link: any;
-  github: any;
-}
 
 export default function Card({
   name,
@@ -23,7 +14,7 @@ export default function Card({
   stack,
   link,
   github,
-}: cardProps) {
+}: projectProps) {
   return (
     <motion.div
       variants={cardVariants}
@@ -31,7 +22,7 @@ export default function Card({
       animate="visible"
       exit="exit"
       className={classes.card}
-      key={name}
+      key={name + link}
     >
       <div className={classes.card_left}>
         <div>
@@ -57,7 +48,7 @@ export default function Card({
                   color: val.color,
                 }}
               >
-                #{val.name}
+                {val.name}
               </li>
             );
           })}

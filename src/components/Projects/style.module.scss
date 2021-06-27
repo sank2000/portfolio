@@ -40,10 +40,46 @@
   }
 
   padding: 5rem 0;
-
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+
+  .btn_container {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  button {
+    text-decoration: none;
+    font-family: $font-family-default;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 1.75rem;
+    margin: 2rem 1rem;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  .showcase {
+    .gallery {
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
 
   .slider_dot_container {
     flex-basis: 10%;
@@ -163,6 +199,84 @@
           }
         }
       }
+    }
+  }
+
+  .project_card {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1em;
+    padding: 1em;
+    padding-bottom: calc(1em + 2rem);
+    position: relative;
+
+    &_top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        width: 3rem;
+        height: 3rem;
+        overflow: hidden;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .btn_container {
+        a {
+          text-decoration: none;
+          color: $color-white;
+          font-size: 2rem;
+
+          &:not(:last-child) {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+
+    &_content {
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+
+      h3 {
+        margin: 1em 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+
+        li {
+          text-transform: capitalize;
+          font-size: 1.2rem;
+          font-weight: 600;
+          &:not(:last-child) {
+            margin-right: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  .more {
+    .project {
+      display: grid;
+      grid-gap: 2em;
+      max-height: 65vh;
+      overflow-x: auto;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
 }

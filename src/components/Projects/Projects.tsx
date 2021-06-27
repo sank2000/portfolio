@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useReducer,
+  Fragment,
+} from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { containerVariants } from '@/constants';
-import Card from './Card';
-import { react, firebase, mongodb, nodejs, pwa } from './Stack';
+import { containerVariants, showcase } from '@/constants';
+import ShowcaseCard from './ShowcaseCard';
+import ProjectCard from './ProjectCard';
 import { withAdditionalProps } from 'types';
 
 export default function Projects({
@@ -16,8 +22,9 @@ export default function Projects({
 }: withAdditionalProps) {
   const [active, setActive] = useState(0);
   const [show, setShow] = useState(false);
+  const [showCase, setShowCase] = useReducer((old) => !old, true);
   const intervalRef = useRef<any>(null);
-  const PROJECT_COUNT = 4;
+  const PROJECT_COUNT = showcase.length;
 
   const setCurrent = () => {
     intervalRef.current = setInterval(() => {
@@ -37,6 +44,8 @@ export default function Projects({
     return () => {
       clearInterval(intervalRef.current);
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = (ind: number) => {
@@ -83,79 +92,73 @@ export default function Projects({
         ></motion.button>
       </nav>
       <main className={classes.main}>
-        <div className={classes.slider_dot_container}>
-          {[...Array(PROJECT_COUNT)].map((_, ind) => {
-            return (
-              <div
-                onClick={() => handleClick(ind)}
-                key={ind}
-                style={{
-                  backgroundColor:
-                    active === ind ? '#fff' : 'rgb(187, 187, 187)',
-                  transform: active === ind ? 'scale(1.2)' : 'scale(1)',
-                }}
-              >
-                &nbsp;
+        {showCase ? (
+          <section className={classes.showcase}>
+            <div className={classes.gallery}>
+              <div className={classes.slider_dot_container}>
+                {[...Array(PROJECT_COUNT)].map((_, ind) => {
+                  return (
+                    <div
+                      onClick={() => handleClick(ind)}
+                      key={ind}
+                      style={{
+                        backgroundColor:
+                          active === ind ? '#fff' : 'rgb(187, 187, 187)',
+                        transform: active === ind ? 'scale(1.2)' : 'scale(1)',
+                      }}
+                    >
+                      &nbsp;
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
-        </div>
-        {show && (
-          <div
-            className={classes.card_container}
-            onMouseEnter={() => clearInterval(intervalRef.current)}
-            onMouseLeave={() => setCurrent()}
-            onTouchStart={() => clearInterval(intervalRef.current)}
-            onTouchEnd={() => setCurrent()}
-          >
-            <AnimatePresence exitBeforeEnter>
-              {active === 0 && (
-                <Card
-                  key="nviktous"
-                  name="nviktous"
-                  image="/images/projects/nviktous.png"
-                  description="It is completely packed E-Commerce site with options like OAuth, OTP etc. which is build using MERN stack.It also contains admin panel where the seller
-                        can handle the sales process"
-                  stack={[react, nodejs, mongodb, firebase]}
-                  link="https://nviktous.herokuapp.com/"
-                  github={null}
-                />
+              {show && (
+                <div
+                  className={classes.card_container}
+                  onMouseEnter={() => clearInterval(intervalRef.current)}
+                  onMouseLeave={() => setCurrent()}
+                  onTouchStart={() => clearInterval(intervalRef.current)}
+                  onTouchEnd={() => setCurrent()}
+                >
+                  <AnimatePresence exitBeforeEnter>
+                    {showcase.map((project, ind) => {
+                      return (
+                        <Fragment key={`${project.name}-${ind}`}>
+                          {active === ind && (
+                            <ShowcaseCard
+                              key={`${project.name}-${ind}`}
+                              {...project}
+                            />
+                          )}
+                        </Fragment>
+                      );
+                    })}
+                  </AnimatePresence>
+                </div>
               )}
-              {active === 1 && (
-                <Card
-                  key="college mate"
-                  name="college mate"
-                  image="/images/projects/collegemate.png"
-                  description="A MERN stack Progressive Web App (PWA) built for students and teaching faculties to easily share materials, homework, assignments, and notes."
-                  stack={[react, nodejs, mongodb, firebase, pwa]}
-                  link="https://collegemate.herokuapp.com/"
-                  github={null}
-                />
+            </div>
+            <div className={classes.btn_container}>
+              {show && (
+                <button onClick={setShowCase}>
+                  <span className="icon-arrow-right-circle"></span>Show more
+                </button>
               )}
-              {active === 2 && (
-                <Card
-                  key="biller"
-                  name="biller"
-                  image="/images/projects/biller.png"
-                  description=" It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe."
-                  stack={[react, nodejs, mongodb]}
-                  link="https://san-biller.herokuapp.com/"
-                  github="https://github.com/sank2000/Biller"
-                />
-              )}
-              {active === 3 && (
-                <Card
-                  key="aubit"
-                  name="aubit"
-                  image="/images/projects/aubit.png"
-                  description="The unofficial website of University College of Engineering, BIT Campus, Tiruchirappalli. The website is still under development and will be approved upon completion to be the official website. Built with React."
-                  stack={[react, nodejs]}
-                  link="https://aubit.netlify.app/"
-                  github={null}
-                />
-              )}
-            </AnimatePresence>
-          </div>
+            </div>
+          </section>
+        ) : (
+          <section className={classes.more}>
+            <div className={classes.project}>
+              {showcase.map((project) => {
+                return <ProjectCard key={project.name} {...project} />;
+              })}
+            </div>
+            <div className={classes.btn_container}>
+              <button onClick={setShowCase}>
+                <span className="icon-arrow-left-circle"></span>
+                Showcase
+              </button>
+            </div>
+          </section>
         )}
       </main>
     </motion.div>

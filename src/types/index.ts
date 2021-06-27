@@ -25,6 +25,15 @@ interface stackProps {
   backgroundColor: string;
 }
 
+interface projectProps {
+  name: string;
+  image: string;
+  description: String;
+  stack: Array<stackProps>;
+  link?: string;
+  github?: string;
+}
+
 interface experienceProps {
   designation: string;
   from: string;
@@ -37,6 +46,7 @@ interface experienceProps {
 }
 
 export type {
+  projectProps,
   page,
   defaultProps,
   stackProps,
