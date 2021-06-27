@@ -18,15 +18,15 @@ export default function Card({
         <div className={classes.logo}>
           <img src={image} alt="project logo" />
         </div>
-        <div className={classes.btn_container}>
+        <div className={classes.link_container}>
           {link && (
             <a target="_blank" rel="noreferrer" href={link}>
-              L
+              <span className="icon-external-link"></span>
             </a>
           )}
           {github && (
             <a target="_blank" rel="noreferrer" href={github}>
-              G
+              <span className="icon-github"></span>
             </a>
           )}
         </div>
