@@ -9,10 +9,19 @@ import {
 
 const showcase: Array<projectProps> = [
   {
+    name: 'bonafide Generator',
+    image: '/images/projects/bonafideGenerator.png',
+    description:
+      'A MERN Stack application for a student to obtain an online bonafide certificate. It also contains a staff panel where they can review student requests.',
+    stack: [react, nodejs, mongodb, pwa],
+    link: 'https://bonafide-generator.netlify.app/',
+    github: 'https://github.com/sank2000/bonafide-generator',
+  },
+  {
     name: 'nviktous',
     image: '/images/projects/nviktous.png',
     description:
-      'It is completely packed E-Commerce site with options like OAuth, OTP etc. which is build using MERN stack.It also contains admin panel where the seller can handle the sales process',
+      'It is a completely packed E-Commerce site with options like OAuth, OTP, etc. which is build using the MERN stack. It also contains an admin panel where the seller can handle the sales process.',
     stack: [react, nodejs, mongodb, firebase],
     link: 'https://nviktous.herokuapp.com/',
   },
@@ -28,19 +37,10 @@ const showcase: Array<projectProps> = [
     name: 'biller',
     image: '/images/projects/biller.png',
     description:
-      ' It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe.',
+      'It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe. It also contains owner panel where they can track the bill.',
     stack: [react, nodejs, mongodb],
     link: 'https://san-biller.herokuapp.com/',
     github: 'https://github.com/sank2000/Biller',
-  },
-  {
-    name: 'aubit',
-    image: '/images/projects/aubit.png',
-    description:
-      'The unofficial website of University College of Engineering, BIT Campus, Tiruchirappalli. The website is still under development and will be approved upon completion to be the official website. Built with React.',
-    stack: [react, nodejs],
-    link: 'https://aubit.netlify.app/',
-    github: null,
   },
 ];
 
