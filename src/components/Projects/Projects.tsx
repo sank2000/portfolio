@@ -14,6 +14,7 @@ import { containerVariants, showcase } from '@/constants';
 import ShowcaseCard from './ShowcaseCard';
 import ProjectCard from './ProjectCard';
 import { withAdditionalProps } from 'types';
+import { projects } from 'constants/projects';
 
 export default function Projects({
   page,
@@ -148,7 +149,7 @@ export default function Projects({
         ) : (
           <section className={classes.more}>
             <div className={classes.project}>
-              {showcase.map((project) => {
+              {projects.map((project) => {
                 return <ProjectCard key={project.name} {...project} />;
               })}
             </div>

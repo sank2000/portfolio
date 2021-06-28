@@ -21,8 +21,8 @@ interface withAdditionalProps extends defaultProps {
 
 interface stackProps {
   name: string;
-  color: string;
-  backgroundColor: string;
+  color?: string;
+  backgroundColor?: string;
 }
 
 interface projectProps {
