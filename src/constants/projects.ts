@@ -24,6 +24,7 @@ const showcase: Array<projectProps> = [
       'It is a completely packed E-Commerce site with options like OAuth, OTP, etc. which is build using the MERN stack. It also contains an admin panel where the seller can handle the sales process.',
     stack: [react, nodejs, mongodb, firebase],
     link: 'https://nviktous.herokuapp.com/',
+    github: 'https://github.com/sank2000/nviktous',
   },
   {
     name: 'college mate',
@@ -32,6 +33,7 @@ const showcase: Array<projectProps> = [
       'A MERN stack Progressive Web App (PWA) built for students and teaching faculties to easily share materials, homework, assignments, and notes.',
     stack: [react, nodejs, mongodb, firebase, pwa],
     link: 'https://collegemate.herokuapp.com/',
+    github: 'https://github.com/sank2000/clg-mate-app',
   },
   {
     name: 'biller',
