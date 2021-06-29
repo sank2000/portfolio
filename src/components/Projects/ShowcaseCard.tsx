@@ -36,7 +36,7 @@ export default function Card({
           <a target="_blank" rel="noreferrer" href={link}>
             LIVE DEMO
           </a>
-          {github !== null && (
+          {github && (
             <a target="_blank" rel="noreferrer" href={github}>
               GITHUB
             </a>
