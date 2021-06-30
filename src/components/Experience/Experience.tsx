@@ -49,16 +49,20 @@ export default function Experience({
     >
       <nav className={classes.nav}>
         <button
-          className="icon-arrow"
           onClick={() => {
             setExitLeft({
               status: true,
             });
           }}
-        ></button>
+        >
+          <span
+            style={{ transform: 'rotate(-90deg)' }}
+            className="icon-arrow"
+            aria-label="back"
+          ></span>
+        </button>
         <h3 className={classes.nav_head}>Experience</h3>
         <motion.button
-          className="icon-arrow"
           onClick={() => {
             setExitLeft({
               status: false,
@@ -72,7 +76,9 @@ export default function Experience({
               duration: 2,
             },
           }}
-        ></motion.button>
+        >
+          <span className="icon-arrow" aria-label="next"></span>
+        </motion.button>
       </nav>
 
       {show && (
@@ -95,21 +101,29 @@ export default function Experience({
           <div className={classes.page_nav}>
             {experiencePage != 1 && (
               <button
-                className="icon-arrow-left-circle"
                 onClick={() => {
                   if (experiencePage === 1) return;
                   setAnimateForward({ value: false });
                 }}
-              ></button>
+              >
+                <span
+                  className="icon-arrow-left-circle"
+                  aria-label="back"
+                ></span>
+              </button>
             )}
             {!(experience.length <= experiencePage * 2) && (
               <button
-                className="icon-arrow-right-circle"
                 onClick={() => {
                   if (experience.length <= experiencePage * 2) return;
                   setAnimateForward({ value: true });
                 }}
-              ></button>
+              >
+                <span
+                  className="icon-arrow-right-circle"
+                  aria-label="next"
+                ></span>
+              </button>
             )}
           </div>
         </main>

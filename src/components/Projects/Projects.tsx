@@ -67,16 +67,20 @@ export default function Projects({
     >
       <nav className={classes.nav}>
         <button
-          className="icon-arrow"
           onClick={() => {
             setExitLeft({
               status: true,
             });
           }}
-        ></button>
+        >
+          <span
+            style={{ transform: 'rotate(-90deg)' }}
+            className="icon-arrow"
+            aria-label="back"
+          ></span>
+        </button>
         <h3 className={classes.nav_head}>Projects</h3>
         <motion.button
-          className="icon-arrow"
           onClick={() =>
             setExitLeft({
               status: false,
@@ -90,7 +94,9 @@ export default function Projects({
               duration: 2,
             },
           }}
-        ></motion.button>
+        >
+          <span className="icon-arrow" aria-label="next"></span>
+        </motion.button>
       </nav>
       <main className={classes.main}>
         {showCase ? (

@@ -52,6 +52,24 @@
   }
 }
 
+@mixin button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  span {
+    font-size: 4rem;
+    display: inline-block;
+    color: rgb(187, 187, 187);
+    letter-spacing: 0px;
+
+    &::after,
+    &::before {
+      cursor: pointer;
+    }
+  }
+}
+
 @mixin LeftCenter {
   display: flex;
   flex-direction: column;

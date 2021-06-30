@@ -5,19 +5,7 @@
   align-items: center;
 
   button {
-    font-size: 4rem;
-    display: inline-block;
-    color: rgb(187, 187, 187);
-    border: none;
-    background-color: transparent;
-    letter-spacing: 0px;
-    cursor: pointer;
-    transform: rotate(-90deg);
-
-    &::after,
-    &::before {
-      cursor: pointer;
-    }
+    @include button;
   }
 }
 

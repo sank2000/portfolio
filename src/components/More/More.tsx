@@ -18,10 +18,13 @@ export default function More({ page, setExitLeft }: withAdditionalProps) {
       exit="exitLeft"
     >
       <nav className={classes.nav}>
-        <button
-          className="icon-arrow"
-          onClick={() => setExitLeft({ status: true })}
-        ></button>
+        <button onClick={() => setExitLeft({ status: true })}>
+          <span
+            style={{ transform: 'rotate(-90deg)' }}
+            className="icon-arrow"
+            aria-label="back"
+          ></span>
+        </button>
       </nav>
       <main className={classes.main}>
         <div className={classes.skills}>
