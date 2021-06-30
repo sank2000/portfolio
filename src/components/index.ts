@@ -6,3 +6,4 @@ export { default as More } from './More/More';
 export { default as Particles } from './Particles/Particles';
 export { default as Loader } from './Loader/Loader';
 export { default as CustomHead } from './CustomHead/CustomHead';
+export { default as NavBar } from './NavBar/NavBar';

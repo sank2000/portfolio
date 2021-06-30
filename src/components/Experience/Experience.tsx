@@ -5,6 +5,7 @@ import classes from './style.module.scss';
 
 import { containerVariants, experience } from '@/constants';
 import { withAdditionalProps, experienceProps } from 'types';
+import { NavBar } from 'components';
 import Card from './Card';
 
 export default function Experience({
@@ -47,39 +48,7 @@ export default function Experience({
       animate="visible"
       exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
     >
-      <nav className={classes.nav}>
-        <button
-          onClick={() => {
-            setExitLeft({
-              status: true,
-            });
-          }}
-        >
-          <span
-            style={{ transform: 'rotate(-90deg)' }}
-            className="icon-arrow"
-            aria-label="back"
-          ></span>
-        </button>
-        <h3 className={classes.nav_head}>Experience</h3>
-        <motion.button
-          onClick={() => {
-            setExitLeft({
-              status: false,
-            });
-          }}
-          animate={{
-            scale: [1, 1.3, 1, 1.3, 1],
-            rotate: [90, 90, 90, 90, 90],
-            transition: {
-              yoyo: Infinity,
-              duration: 2,
-            },
-          }}
-        >
-          <span className="icon-arrow" aria-label="next"></span>
-        </motion.button>
-      </nav>
+      <NavBar name="Experience" {...{ setExitLeft }} />
 
       {show && (
         <main className={classes.main}>

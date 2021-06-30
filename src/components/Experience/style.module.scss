@@ -1,21 +1,5 @@
 @import 'styles/utilities.scss';
 
-.nav {
-  display: flex;
-  align-items: center;
-
-  button {
-    @include button;
-  }
-
-  .nav_head {
-    font-size: 5rem;
-    flex-grow: 1;
-    text-align: center;
-    font-family: $font-family-special;
-  }
-}
-
 .main {
   min-height: 80vh;
   display: flex;
