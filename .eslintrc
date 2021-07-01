@@ -1,6 +1,6 @@
 {
-  "extends": "next",
-  "plugins": ["unused-imports"],
+  "extends": ["next", "plugin:jsx-a11y/recommended"],
+  "plugins": ["unused-imports", "jsx-a11y"],
   "rules": {
     "@next/next/no-img-element": "off",
     "unused-imports/no-unused-imports": "error",
