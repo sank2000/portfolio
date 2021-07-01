@@ -55,9 +55,9 @@ export default function Card({
       </div>
       <div className={classes.details__container}>
         <h4>{designation}</h4>
-        <h6 style={{ cursor: 'pointer' }} onClick={() => window.open(link)}>
+        <a href={link} target="_blank" rel="noreferrer">
           @ {company}
-        </h6>
+        </a>
         <p>{description}</p>
       </div>
     </motion.div>

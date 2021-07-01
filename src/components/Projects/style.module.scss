@@ -55,14 +55,16 @@
   .slider_dot_container {
     flex-basis: 10%;
 
-    div {
+    button {
       width: 2rem;
+      border: none;
       height: 2rem;
       border-radius: 100%;
       background-color: rgb(187, 187, 187);
       margin: 2rem;
       transition: all 0.3s;
       cursor: pointer;
+      padding: 0px !important;
 
       @media (max-width: 600px) {
         width: 1.5rem;

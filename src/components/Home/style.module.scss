@@ -8,7 +8,7 @@
     margin: 0 auto;
     width: 83%;
     text-align: center;
-    bottom: 0%;
+    bottom: -2%;
     transition: all 0.3s;
     letter-spacing: 2px;
     word-spacing: 4px;
@@ -20,12 +20,12 @@
 
     @media (max-width: 410px) {
       font-size: 4rem;
-      bottom: 1%;
+      bottom: -1.5%;
     }
 
     @media (max-width: 360px) {
       font-size: 3.2rem;
-      bottom: 1.5%;
+      bottom: -1%;
     }
 
     @media (max-width: 300px) {
@@ -56,7 +56,6 @@
   }
 
   .nav_links {
-    font-size: 3rem;
     list-style: none;
     display: flex;
 
@@ -71,7 +70,18 @@
     }
 
     li {
-      cursor: pointer;
+      button {
+        font-size: 3rem;
+        cursor: pointer;
+        background-color: transparent;
+        font-family: inherit;
+        color: $color-white;
+        outline: none;
+        border: none;
+        @media (max-width: 500px) {
+          font-size: 2rem;
+        }
+      }
 
       &:not(:last-child) {
         margin-right: 3rem;

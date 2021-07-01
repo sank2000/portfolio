@@ -75,7 +75,7 @@ export default function Projects({
               <div className={classes.slider_dot_container}>
                 {[...Array(PROJECT_COUNT)].map((_, ind) => {
                   return (
-                    <div
+                    <button
                       onClick={() => handleClick(ind)}
                       key={ind}
                       style={{
@@ -83,9 +83,10 @@ export default function Projects({
                           active === ind ? '#fff' : 'rgb(187, 187, 187)',
                         transform: active === ind ? 'scale(1.2)' : 'scale(1)',
                       }}
+                      aria-label={`project-${ind + 1}`}
                     >
                       &nbsp;
-                    </div>
+                    </button>
                   );
                 })}
               </div>
@@ -97,7 +98,7 @@ export default function Projects({
                   onTouchStart={() => clearInterval(intervalRef.current)}
                   onTouchEnd={() => setCurrent()}
                 >
-                  <AnimatePresence exitBeforeEnter>
+                  <AnimatePresence>
                     {showcase.map((project, ind) => {
                       return (
                         <Fragment key={`${project.name}-${ind}`}>

@@ -37,10 +37,26 @@ export default function Home({
           <img src="/images/logo/logo white.svg" alt="logo" />
         </div>
         <ul className={classes.nav_links}>
-          <li onClick={() => setPage({ no: 2, forward: true })}>About</li>
-          <li onClick={() => setPage({ no: 3, forward: true })}>Experience</li>
-          <li onClick={() => setPage({ no: 4, forward: true })}>Projects</li>
-          <li onClick={() => setPage({ no: 5, forward: true })}>More</li>
+          <li>
+            <button onClick={() => setPage({ no: 2, forward: true })}>
+              About
+            </button>
+          </li>
+          <li>
+            <button onClick={() => setPage({ no: 3, forward: true })}>
+              Experience
+            </button>
+          </li>
+          <li>
+            <button onClick={() => setPage({ no: 4, forward: true })}>
+              Projects
+            </button>
+          </li>
+          <li>
+            <button onClick={() => setPage({ no: 5, forward: true })}>
+              More
+            </button>
+          </li>
         </ul>
       </nav>
       <main className={classes.main}>

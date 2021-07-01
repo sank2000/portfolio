@@ -18,8 +18,12 @@
       font-size: 1.5rem;
     }
 
-    h6 {
+    a {
       font-size: 2rem;
+      text-decoration: none;
+      font-family: inherit;
+      font-style: italic;
+      color: $color-white;
     }
 
     &__container {
