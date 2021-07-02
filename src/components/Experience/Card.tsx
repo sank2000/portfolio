@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { experienceProps } from 'types';
 import { containerVariants } from '@/constants';
+import { experienceProps } from 'types';
 
 export default function Card({
   designation,

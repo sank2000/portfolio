@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
+import { NavBar } from 'components';
 import { containerVariants } from '@/constants';
 import { withAdditionalProps } from 'types';
-import { NavBar } from 'components';
 
 export default function About({
   page,

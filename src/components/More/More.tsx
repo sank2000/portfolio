@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
+import Contact from './Contact';
+import Skills from './Skills';
 import { containerVariants } from '@/constants';
 import { withAdditionalProps } from 'types';
-import Skills from './Skills';
-import Contact from './Contact';
 
 export default function More({ page, setExitLeft }: withAdditionalProps) {
   return (

@@ -1,9 +1,9 @@
 import React, {
-  useState,
-  useEffect,
-  useRef,
-  useReducer,
   Fragment,
+  useEffect,
+  useReducer,
+  useRef,
+  useState,
 } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
@@ -11,11 +11,11 @@ import { motion } from 'framer-motion';
 import classes from './style.module.scss';
 
 import { containerVariants, showcase } from '@/constants';
-import ShowcaseCard from './ShowcaseCard';
-import ProjectCard from './ProjectCard';
-import { withAdditionalProps } from 'types';
 import { NavBar } from 'components';
+import ProjectCard from './ProjectCard';
+import ShowcaseCard from './ShowcaseCard';
 import { projects } from 'constants/projects';
+import { withAdditionalProps } from 'types';
 
 export default function Projects({
   page,

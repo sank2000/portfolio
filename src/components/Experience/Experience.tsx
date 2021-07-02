@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
 
 import classes from './style.module.scss';
 
 import { containerVariants, experience } from '@/constants';
-import { withAdditionalProps, experienceProps } from 'types';
-import { NavBar } from 'components';
+import { experienceProps, withAdditionalProps } from 'types';
 import Card from './Card';
+import { NavBar } from 'components';
 
 export default function Experience({
   page,

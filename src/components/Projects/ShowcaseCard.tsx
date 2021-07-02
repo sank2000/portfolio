@@ -1,11 +1,11 @@
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { projectProps } from 'types';
 import { cardVariants } from '@/constants';
+import { projectProps } from 'types';
 
 export default function Card({
   name,

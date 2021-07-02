@@ -1,16 +1,16 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useSwipeable } from 'react-swipeable';
 
 import {
-  Home,
   About,
+  CustomHead,
   Experience,
-  Projects,
+  Home,
+  Loader,
   More,
   Particles,
-  Loader,
-  CustomHead,
+  Projects,
 } from 'components';
 import { page } from 'types';
 

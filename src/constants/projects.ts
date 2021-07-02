@@ -1,11 +1,11 @@
-import { projectProps } from 'types';
 import {
-  react,
-  nodejs,
-  mongodb,
   firebase,
+  mongodb,
+  nodejs,
   pwa,
+  react,
 } from 'components/Projects/Stack';
+import { projectProps } from 'types';
 
 const showcase: Array<projectProps> = [
   {

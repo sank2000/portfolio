@@ -1,4 +1,4 @@
-import React, { ReactChildren, ReactChild } from 'react';
+import React, { ReactChild, ReactChildren } from 'react';
 
 import classes from './style.module.scss';
 
