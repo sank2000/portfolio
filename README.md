@@ -7,6 +7,17 @@ This project is a constant work in progress, so if you find any bugs, typos or o
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sank2000/portfolio)](https://github.com/sank2000/portfolio/releases) [![Release Date](https://img.shields.io/github/release-date/sank2000/portfolio?color=orange)](https://github.com/sank2000/portfolio/releases/latest)
 [![Release Date](https://img.shields.io/github/license/sank2000/portfolio?color=brightgreen)](https://github.com/sank2000/portfolio/blob/main/LICENSE)
 
+## Features
+
+- Swipe left or right to navigate the page
+- Keyboard key to navigate page
+    - Enter or Backspace key
+    - Right or Left arrow key
+    - d or a key 
+- cool tech background
+- attractive animation
+- more
+
 ## Getting this project up and running
 
 1.  **Fork or Clone**
