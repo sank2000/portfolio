@@ -5,7 +5,7 @@ This is my portfolio website, proudly built with [Next.js](https://nextjs.org/),
 This project is a constant work in progress, so if you find any bugs, typos or other errors, please feel free to open an issue or a pull request. This project is open source, so please feel free to fork and adapt for your own projects (credit would be appreciated).
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/sank2000/portfolio)](https://github.com/sank2000/portfolio/releases) [![Release Date](https://img.shields.io/github/release-date/sank2000/portfolio?color=orange)](https://github.com/sank2000/portfolio/releases/latest)
-[![Release Date](https://img.shields.io/github/license/sank2000/portfolio?color=2b9348)](https://github.com/sank2000/portfolio/blob/master/LICENSE)
+[![Release Date](https://img.shields.io/github/license/sank2000/portfolio?color=brightgreen)](https://github.com/sank2000/portfolio/blob/main/LICENSE)
 
 ## Getting this project up and running
 
