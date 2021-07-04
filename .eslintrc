@@ -22,6 +22,12 @@
 				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
 				"allowSeparatedGroups": true
 			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"endOfLine": "auto"
+			}
 		]
 	}
 }
