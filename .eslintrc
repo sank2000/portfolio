@@ -1,27 +1,27 @@
 {
-  "extends": ["next", "plugin:jsx-a11y/recommended"],
-  "plugins": ["unused-imports", "jsx-a11y"],
-  "rules": {
-    "@next/next/no-img-element": "off",
-    "unused-imports/no-unused-imports": "error",
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "vars": "all",
-        "varsIgnorePattern": "^_",
-        "args": "after-used",
-        "argsIgnorePattern": "^_"
-      }
-    ],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-        "allowSeparatedGroups": true
-      }
-    ]
-  }
+	"extends": ["next", "plugin:jsx-a11y/recommended", "plugin:prettier/recommended"],
+	"plugins": ["unused-imports", "jsx-a11y", "prettier"],
+	"rules": {
+		"@next/next/no-img-element": "off",
+		"unused-imports/no-unused-imports": "error",
+		"unused-imports/no-unused-vars": [
+			"warn",
+			{
+				"vars": "all",
+				"varsIgnorePattern": "^_",
+				"args": "after-used",
+				"argsIgnorePattern": "^_"
+			}
+		],
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": false,
+				"ignoreDeclarationSort": false,
+				"ignoreMemberSort": false,
+				"memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+				"allowSeparatedGroups": true
+			}
+		]
+	}
 }
