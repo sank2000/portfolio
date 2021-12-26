@@ -20,6 +20,16 @@ const experience: Array<experienceProps> = [
 		company: 'ZOPNIK',
 		link: 'https://zopnik.com/',
 		stack: ['react', 'node-dot-js', 'mysql']
+	},
+	{
+		designation: 'Frontend Intern',
+		from: 'Aug 2020',
+		to: 'Aug 2021',
+		description:
+			'Worked on the several client’s frontend application using React JS. Also worked on headless CMS like strapi.',
+		company: 'OMIKRON',
+		link: 'https://puneetpugalia.com/',
+		stack: ['react']
 	}
 ];
 
