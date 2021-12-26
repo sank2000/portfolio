@@ -73,7 +73,7 @@ const projects: Array<projectProps> = [
 		image: 'https://raw.githubusercontent.com/ZOSIME-tech/website/master/img/logo/logo-white.png',
 		description: 'The official landing site of Zosime Tech built with the power of HTML and CSS.',
 		stack: [{ name: 'HTML' }, { name: 'SASS' }, { name: 'JS' }],
-		link: 'https://zosimetech.tk/',
+		link: 'https://zosime-tech.github.io/website/',
 		github: 'https://github.com/ZOSIME-tech/website'
 	},
 	{
