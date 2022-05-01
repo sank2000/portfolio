@@ -23,12 +23,21 @@ const experience: Array<experienceProps> = [
 	},
 	{
 		designation: 'Frontend Intern',
-		from: 'Aug 2020',
+		from: 'Aug 2021',
 		to: 'Aug 2021',
 		description:
 			'Worked on the several client’s frontend application using React JS. Also worked on headless CMS like strapi.',
 		company: 'OMIKRON',
 		link: 'https://puneetpugalia.com/',
+		stack: ['react']
+	},
+	{
+		designation: 'Frontend Intern',
+		from: 'Nov 2021',
+		to: 'Mar 2022',
+		description: 'Worked on the analytics dashboard for the stock market.',
+		company: 'TealVue',
+		link: 'https://tealvue.com/',
 		stack: ['react']
 	}
 ];
