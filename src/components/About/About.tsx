@@ -35,8 +35,7 @@ export default function About({ page, exitLeft, setExitLeft }: withAdditionalPro
 
 					<h3>
 						I am <span className={classes.name}>Santhosh</span> shortly{' '}
-						<span className={classes.short_name}>San </span>
-						doing my bachelor&apos;s degree in University College of Engineering, Trichy
+						<span className={classes.short_name}>San, </span> Software Developer at Zoho Corp.
 					</h3>
 
 					<ul>
