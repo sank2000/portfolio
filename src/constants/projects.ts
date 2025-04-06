@@ -1,10 +1,38 @@
 import { firebase, mongodb, nodejs, pwa, react } from 'components/Projects/Stack';
 import { projectProps } from 'types';
 
-const showcase: Array<projectProps> = [
+const projects: Array<projectProps> = [
 	{
-		name: 'bonafide Generator',
-		image: '/images/projects/bonafideGenerator.png',
+		name: 'NVIKTOUS',
+		image:
+			'https://raw.githubusercontent.com/sank2000/nviktous/refs/heads/master/client/public/images/logo.png',
+		description:
+			'It is a completely packed E-Commerce site with options like OAuth, OTP, etc. which is build using the MERN stack. It also contains an admin panel where the seller can handle the sales process.',
+		stack: [react, nodejs, mongodb, firebase],
+		github: 'https://github.com/sank2000/nviktous'
+	},
+	{
+		name: 'Biller',
+		image:
+			'https://raw.githubusercontent.com/sank2000/Biller/refs/heads/master/app/public/ico/favicon.ico',
+		description:
+			'It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe. It also contains owner panel where they can track the bill.',
+		stack: [react, nodejs, mongodb],
+		github: 'https://github.com/sank2000/Biller'
+	},
+	{
+		name: 'College Mate',
+		image:
+			'https://raw.githubusercontent.com/sank2000/clg-mate-app/refs/heads/reformed/client/public/images/logo.png',
+		description:
+			'A MERN stack Progressive Web App (PWA) built for students and teaching faculties to easily share materials, homework, assignments, and notes.',
+		stack: [react, nodejs, mongodb, firebase, pwa],
+		github: 'https://github.com/sank2000/clg-mate-app'
+	},
+	{
+		name: 'Bonafide Generator',
+		image:
+			'https://raw.githubusercontent.com/sank2000/bonafide-generator/refs/heads/main/public/images/ico/favicon.ico',
 		description:
 			'A MERN Stack application for a student to obtain an online bonafide certificate. It also contains a staff panel where they can review student requests.',
 		stack: [react, nodejs, mongodb, pwa],
@@ -12,37 +40,7 @@ const showcase: Array<projectProps> = [
 		github: 'https://github.com/sank2000/bonafide-generator'
 	},
 	{
-		name: 'nviktous',
-		image: '/images/projects/nviktous.png',
-		description:
-			'It is a completely packed E-Commerce site with options like OAuth, OTP, etc. which is build using the MERN stack. It also contains an admin panel where the seller can handle the sales process.',
-		stack: [react, nodejs, mongodb, firebase],
-		link: 'https://nviktous.herokuapp.com/',
-		github: 'https://github.com/sank2000/nviktous'
-	},
-	{
-		name: 'college mate',
-		image: '/images/projects/collegemate.png',
-		description:
-			'A MERN stack Progressive Web App (PWA) built for students and teaching faculties to easily share materials, homework, assignments, and notes.',
-		stack: [react, nodejs, mongodb, firebase, pwa],
-		link: 'https://collegemate.herokuapp.com/',
-		github: 'https://github.com/sank2000/clg-mate-app'
-	},
-	{
-		name: 'biller',
-		image: '/images/projects/biller.png',
-		description:
-			'It is MERN Stack application for online bill payment with payment methods like PayPal and Stripe. It also contains owner panel where they can track the bill.',
-		stack: [react, nodejs, mongodb],
-		link: 'https://san-biller.herokuapp.com/',
-		github: 'https://github.com/sank2000/Biller'
-	}
-];
-
-const projects: Array<projectProps> = [
-	{
-		name: 'aubit',
+		name: 'AUBIT',
 		image:
 			'https://raw.githubusercontent.com/Infinite-Loop-Club/AUBIT/master/public/images/logo-maroon.png',
 		description:
@@ -70,14 +68,15 @@ const projects: Array<projectProps> = [
 	},
 	{
 		name: 'Zosime Tech',
-		image: 'https://raw.githubusercontent.com/ZOSIME-tech/website/master/img/logo/logo-white.png',
+		image:
+			'https://raw.githubusercontent.com/ZOSIME-tech/website/refs/heads/master/img/favicon/favicon.ico',
 		description: 'The official landing site of Zosime Tech built with the power of HTML and CSS.',
 		stack: [{ name: 'HTML' }, { name: 'SASS' }, { name: 'JS' }],
 		link: 'https://zosime-tech.github.io/website/',
 		github: 'https://github.com/ZOSIME-tech/website'
 	},
 	{
-		name: 'class-scheduler',
+		name: 'Class Scheduler',
 		image: 'https://raw.githubusercontent.com/benxene/blobs/main/schedule.png',
 		description: 'A zero dependency class time-table manager.',
 		stack: [{ name: 'typescript' }, { name: 'package' }],
@@ -85,7 +84,7 @@ const projects: Array<projectProps> = [
 		github: 'https://github.com/benxene/class-scheduler'
 	},
 	{
-		name: 'dictionary',
+		name: 'Dictionary',
 		image: 'https://raw.githubusercontent.com/sank2000/dictionary/main/app/assets/icon.png',
 		description:
 			'A simple free and open-source dictionary app that uses the API created by Meet Developer.',
@@ -95,4 +94,4 @@ const projects: Array<projectProps> = [
 	}
 ];
 
-export { showcase, projects };
+export { projects };

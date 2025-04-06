@@ -1,31 +1,31 @@
 import { stackProps } from 'types';
 
 const react: stackProps = {
-	name: 'react',
+	name: 'React',
 	color: '#000',
 	backgroundColor: '#61DBFB'
 };
 
 const firebase: stackProps = {
-	name: 'firebase',
+	name: 'FireBase',
 	color: '#000',
 	backgroundColor: '#FFA611'
 };
 
 const mongodb: stackProps = {
-	name: 'mongodb',
+	name: 'MongoDB',
 	color: '#000',
 	backgroundColor: '#4DB33D'
 };
 
 const nodejs: stackProps = {
-	name: 'nodejs',
+	name: 'NodeJS',
 	color: '#fff',
 	backgroundColor: '#3C873A'
 };
 
 const pwa: stackProps = {
-	name: 'pwa',
+	name: 'PWA',
 	color: '#000',
 	backgroundColor: '#fff'
 };
