@@ -24,27 +24,22 @@ export default function Particle() {
 						type: ['circle', 'image'],
 						image: [
 							{
-								src: '/images/stack/react.svg',
-								height: 24,
-								width: 24
-							},
-							{
-								src: '/images/stack/figma.svg',
-								height: 20,
-								width: 16
-							},
-							{
-								src: '/images/stack/mongodb.svg',
+								src: '/images/stack/java.svg',
 								height: 20,
 								width: 23
 							},
 							{
-								src: '/images/stack/mysql.svg',
+								src: '/images/stack/spring.svg',
 								height: 30,
 								width: 35
 							},
 							{
-								src: '/images/stack/next-dot-js.svg',
+								src: '/images/stack/apachekafka.svg',
+								height: 25,
+								width: 25
+							},
+							{
+								src: '/images/stack/javascript.svg',
 								height: 25,
 								width: 25
 							},
@@ -54,14 +49,19 @@ export default function Particle() {
 								width: 20
 							},
 							{
+								src: '/images/stack/react.svg',
+								height: 24,
+								width: 24
+							},
+							{
 								src: '/images/stack/nodejs.svg',
 								height: 25,
 								width: 25
 							},
 							{
-								src: '/images/stack/graphql.svg',
-								height: 25,
-								width: 25
+								src: '/images/stack/figma.svg',
+								height: 20,
+								width: 16
 							}
 						]
 					},

@@ -6,20 +6,32 @@ export default function Skills() {
 	return (
 		<>
 			<div className={classes.icon_container}>
+				<Skill icon='icon-java'></Skill>
+				<Skill icon='icon-javascript'></Skill>
+				<Skill icon='icon-typescript'></Skill>
+				<Skill icon='icon-c'></Skill>
+				<Skill icon='icon-cplusplus' title='C++'></Skill>
+			</div>
+			<div className={classes.icon_container}>
+				<Skill icon='icon-mysql'></Skill>
+				<Skill icon='icon-postgresql'></Skill>
+				<Skill icon='icon-mongodb'></Skill>
+				<Skill icon='icon-firebase'></Skill>
+			</div>
+			<div className={classes.icon_container}>
+				<Skill icon='icon-spring'></Skill>
+				<Skill icon='icon-apachekafka' title='Apache Kafka'></Skill>
+				<Skill icon='icon-figma'></Skill>
 				<Skill icon='icon-html5'></Skill>
 				<Skill icon='icon-css3'></Skill>
 				<Skill icon='icon-sass'></Skill>
 				<Skill icon='icon-styled-components'></Skill>
-				<Skill icon='icon-javascript'></Skill>
-				<Skill icon='icon-typescript'></Skill>
 				<Skill icon='icon-react'></Skill>
-				<Skill icon='icon-next-dot-js' title='next.js'></Skill>
 				<Skill icon='icon-redux'></Skill>
-				<Skill icon='icon-figma'></Skill>
+				<Skill icon='icon-next-dot-js' title='next.js'></Skill>
 				<Skill icon='icon-node-dot-js' title='node.js'></Skill>
 				<Skill icon='icon-express'></Skill>
 				<Skill icon='icon-graphql'></Skill>
-				<Skill icon='icon-apollo'></Skill>
 				<Skill icon='icon-sequelize'>
 					<span className='path1'></span>
 					<span className='path2'></span>
@@ -50,19 +62,8 @@ export default function Skills() {
 					<span className='path27'></span>
 				</Skill>
 				<Skill icon='icon-jest'></Skill>
+				<Skill icon='icon-git'></Skill>
 				<Skill icon='icon-docker'></Skill>
-			</div>
-			<div className={classes.icon_container}>
-				<Skill icon='icon-mongodb'></Skill>
-				<Skill icon='icon-mysql'></Skill>
-				<Skill icon='icon-postgresql'></Skill>
-				<Skill icon='icon-firebase'></Skill>
-			</div>
-			<div className={classes.icon_container}>
-				<Skill icon='icon-java'></Skill>
-				<Skill icon='icon-python'></Skill>
-				<Skill icon='icon-c'></Skill>
-				<Skill icon='icon-cplusplus' title='C++'></Skill>
 			</div>
 		</>
 	);
