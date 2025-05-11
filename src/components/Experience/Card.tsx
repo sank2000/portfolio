@@ -1,5 +1,5 @@
 // Card.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
@@ -16,7 +16,21 @@ export default function Card({
 	company,
 	link
 }: experienceProps) {
-	const isLeftCard = id % 2 === 0;
+	const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setScreenWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	const isLeftCard = screenWidth < 550 ? false : id % 2 === 0;
 
 	const renderDescription = () => {
 		if (Array.isArray(description)) {
