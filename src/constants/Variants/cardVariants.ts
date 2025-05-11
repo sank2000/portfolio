@@ -1,15 +1,20 @@
 const cardVariants = {
-	hidden: {
-		opacity: 0,
-		y: '-100vw'
-	},
+	hidden: { opacity: 0, y: 50 },
 	visible: {
 		opacity: 1,
 		y: 0,
-		transition: { type: 'tween', delay: 0.5 }
+		transition: {
+			duration: 0.5,
+			ease: 'easeOut'
+		}
 	},
 	exit: {
-		y: '200vw'
+		opacity: 0,
+		y: -50,
+		transition: {
+			duration: 0.3,
+			ease: 'easeIn'
+		}
 	}
 };
 

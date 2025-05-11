@@ -1,64 +1,85 @@
-import React, { useEffect, useRef, useState } from 'react';
+// Card.tsx
+import React from 'react';
 import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
-import { containerVariants } from '@/constants';
+import { cardVariants } from '@/constants';
 import { experienceProps } from 'types';
 
 export default function Card({
+	id,
 	designation,
 	from,
 	to,
 	description,
 	company,
-	link,
-	stack,
-	forward
+	link
 }: experienceProps) {
-	const [icon, setIcon] = useState(stack ? stack[0] : '');
-	const intervalRef = useRef<any>();
-	const countRef = useRef(0);
+	const isLeftCard = id % 2 === 0;
 
-	useEffect(() => {
-		if (stack && stack.length > 1) {
-			intervalRef.current = setInterval(() => {
-				countRef.current = countRef.current + 1;
-				if (countRef.current === stack.length) {
-					countRef.current = 0;
-				}
-				setIcon(stack[countRef.current]);
-			}, 3000);
+	const renderDescription = () => {
+		if (Array.isArray(description)) {
+			return (
+				<ul className={classes.descriptionList}>
+					{description.map((item, index) => (
+						<li key={index}>{item}</li>
+					))}
+				</ul>
+			);
 		}
-		return () => {
-			if (intervalRef.current) {
-				clearInterval(intervalRef.current);
-			}
-		};
-	}, [stack]);
+		return <p>{description}</p>;
+	};
 
 	return (
 		<motion.div
-			variants={containerVariants}
-			initial={forward ? 'hiddenLeft' : 'hiddenRight'}
+			variants={cardVariants}
+			initial='hidden'
 			animate='visible'
-			exit={forward ? 'exitRight' : 'exitLeft'}
-			className={classes.experience__container}
-			key={`${from}-${company}`}
+			exit='exit'
+			transition={{
+				...cardVariants.visible.transition
+			}}
+			className={classes.experience__row}
 		>
-			<div className={classes.left__container}>
-				<p>{from}</p>
-				<div className={classes.icon__container}>
-					<span className={`icon-${icon}`}></span>
-				</div>
-				<p>{to}</p>
+			<div className={`${classes.experience__slot} ${classes.experience__slot_left}`}>
+				{isLeftCard && (
+					<div className={classes.details__container}>
+						<div className={classes.timeline__duration_enhanced}>
+							<span className={classes.duration_icon}></span>
+							<h2>
+								{from} &ndash; {to}
+							</h2>
+						</div>
+						<h4>{designation}</h4>
+						<a href={link} target='_blank' rel='noreferrer' className={classes.companyLink}>
+							{company}
+						</a>
+						{renderDescription()}
+					</div>
+				)}
 			</div>
-			<div className={classes.details__container}>
-				<h4>{designation}</h4>
-				<a href={link} target='_blank' rel='noreferrer'>
-					@ {company}
-				</a>
-				<p>{description}</p>
+
+			<div className={classes.experience__gutter}>
+				<div className={classes.timeline_dot}></div>
+			</div>
+
+			<div className={`${classes.experience__slot} ${classes.experience__slot_right}`}>
+				{!isLeftCard && (
+					<div className={classes.details__container}>
+						<div className={classes.timeline__duration_enhanced}>
+							<span className={classes.duration_icon}></span>
+							<h2>
+								{from} &ndash; {to}
+							</h2>
+						</div>
+						<h4>{designation}</h4>
+						<a href={link} target='_blank' rel='noreferrer' className={classes.companyLink}>
+							{company}
+						</a>
+						{renderDescription()}
+					</div>
+				)}
 			</div>
 		</motion.div>
 	);

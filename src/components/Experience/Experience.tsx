@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import classes from './style.module.scss';
 
@@ -9,10 +9,31 @@ import Card from './Card';
 import { NavBar } from 'components';
 
 export default function Experience({ page, exitLeft, setExitLeft }: withAdditionalProps) {
-	const [experiencePage, setExperiencePage] = useState(1);
-	const [animateForward, setAnimateForward] = useState({ value: true });
 	const [show, setShow] = useState(false);
-	const initialRef = useRef(false);
+	const mainRef = useRef<HTMLDivElement>(null);
+
+	const updateTimelineHeight = () => {
+		if (mainRef.current) {
+			const totalHeight = mainRef.current.scrollHeight;
+			mainRef.current.style.setProperty('--total-scroll-height', `${totalHeight}px`);
+		}
+	};
+
+	useEffect(() => {
+		updateTimelineHeight();
+
+		window.addEventListener('resize', updateTimelineHeight);
+
+		const observer = new MutationObserver(updateTimelineHeight);
+		if (mainRef.current) {
+			observer.observe(mainRef.current, { childList: true, subtree: true, attributes: true });
+		}
+
+		return () => {
+			window.removeEventListener('resize', updateTimelineHeight);
+			observer.disconnect();
+		};
+	}, [show]);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -24,21 +45,9 @@ export default function Experience({ page, exitLeft, setExitLeft }: withAddition
 		};
 	}, []);
 
-	useEffect(() => {
-		if (initialRef.current) {
-			if (animateForward.value) {
-				setExperiencePage(old => old + 1);
-			} else {
-				setExperiencePage(old => old - 1);
-			}
-		} else {
-			initialRef.current = true;
-		}
-	}, [animateForward]);
-
 	return (
 		<motion.div
-			key='about'
+			key='experience'
 			variants={containerVariants}
 			initial={page.forward ? 'hiddenLeft' : 'hiddenRight'}
 			animate='visible'
@@ -47,43 +56,11 @@ export default function Experience({ page, exitLeft, setExitLeft }: withAddition
 			<NavBar name='Experience' {...{ setExitLeft }} />
 
 			{show && (
-				<main className={classes.main}>
+				<main className={classes.main} ref={mainRef}>
 					<div className={classes.experience}>
-						<AnimatePresence>
-							{experience
-								.slice(experiencePage * 2 - 2, experiencePage * 2)
-								.map((data: experienceProps, ind) => {
-									return (
-										<Card
-											{...data}
-											forward={animateForward.value}
-											key={`${data.company}-${ind}-${experiencePage}`}
-										/>
-									);
-								})}
-						</AnimatePresence>
-					</div>
-					<div className={classes.page_nav}>
-						{experiencePage != 1 && (
-							<button
-								onClick={() => {
-									if (experiencePage === 1) return;
-									setAnimateForward({ value: false });
-								}}
-							>
-								<span className='icon-arrow-left-circle' aria-label='back'></span>
-							</button>
-						)}
-						{!(experience.length <= experiencePage * 2) && (
-							<button
-								onClick={() => {
-									if (experience.length <= experiencePage * 2) return;
-									setAnimateForward({ value: true });
-								}}
-							>
-								<span className='icon-arrow-right-circle' aria-label='next'></span>
-							</button>
-						)}
+						{experience.map((data: experienceProps, ind) => {
+							return <Card {...data} key={`${data.company}-${ind}`} />;
+						})}
 					</div>
 				</main>
 			)}

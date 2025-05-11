@@ -38,11 +38,12 @@ interface experienceProps {
 	designation: string;
 	from: string;
 	to: string;
-	description: string;
+	description: string[];
 	company: string;
 	link: string;
 	stack: Array<string>;
 	forward?: boolean;
+	id: number;
 }
 
 export type { projectProps, page, defaultProps, stackProps, experienceProps, withAdditionalProps };
