@@ -9,6 +9,7 @@ interface defaultProps {
 }
 
 interface withAdditionalProps extends defaultProps {
+	isPageLoading?: boolean;
 	exitLeft: {
 		status: boolean;
 	};

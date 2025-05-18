@@ -29,7 +29,17 @@ export default function About({
 					aria-label='back'
 				></span>
 			</button>
-			<h3 className={classes.nav_head}>{name}</h3>
+			<h3 className={classes.nav_head}>
+				{name
+					.split('')
+					.map((char, index) =>
+						char === '/' ? (
+							<span key={index}>/</span>
+						) : (
+							<React.Fragment key={`char-${index}`}>{char}</React.Fragment>
+						)
+					)}
+			</h3>
 			<motion.button
 				onClick={() => {
 					setExitLeft({

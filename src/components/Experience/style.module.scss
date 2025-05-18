@@ -130,6 +130,13 @@
 
 	animation: subtleGlow 3s ease-in-out infinite;
 
+	transition: color 0.3s ease;
+
+	&:hover {
+		background: $color-primary-font-over-main;
+		cursor: none;
+	}
+
 	@media (max-width: 549px) {
 		top: 0;
 		margin: 0;
@@ -164,9 +171,11 @@
 		margin-top: 0.3rem;
 		margin-bottom: 1rem;
 
+		transition: color 0.3s ease;
+
 		&:hover {
-			text-decoration: underline;
-			color: $color-white;
+			text-decoration: none;
+			color: $color-primary-font-over-main;
 		}
 	}
 
@@ -224,6 +233,14 @@
 	font-weight: 600;
 	white-space: nowrap;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+	transition: color 0.3s ease;
+
+	&:hover {
+		text-decoration: none;
+		color: $color-primary-font-over-main;
+		cursor: grab;
+	}
 
 	h2 {
 		font-size: inherit;

@@ -16,26 +16,28 @@ export default function About({ page, exitLeft, setExitLeft }: withAdditionalPro
 			animate='visible'
 			exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
 		>
-			<NavBar name='About' {...{ setExitLeft }} />
+			<NavBar name='<About me />' {...{ setExitLeft }} />
 
 			<main className={classes.main}>
 				<div className={classes.main__left}>
 					<div>
-						<h2>Hello Mate</h2>
-						<img src='/images/hi.gif' alt='hi' />
-						<h2>,</h2>
+						<h2>Hi there!</h2>
 					</div>
 
 					<h3>
-						I am <span className={classes.name}>Santhosh</span> shortly{' '}
-						<span className={classes.short_name}>San, </span> Software Developer at Zoho Corp.
+						I&#39;m <span className={classes.name}>Santhosh</span> (or{' '}
+						<span className={classes.short_name}>San</span>), a Software Developer at Zoho Corp.
 					</h3>
 
 					<h4>
-						With a solid background in full-stack development, I specialize in building scalable and
-						high-performance applications. I am passionate about developing innovative solutions
-						that optimize system performance and drive efficiency. I always look forward to new
-						opportunities to learn and grow.
+						I&#39;m a passionate full-stack developer who thrives on building sleek,
+						high-performance web applications. I specialize in creating smooth, intuitive user
+						experiences while ensuring systems are efficient and scalable.
+					</h4>
+					<h4>
+						Whether it’s optimizing backend performance or crafting clean, responsive frontends, I’m
+						always eager to learn, experiment, and tackle new challenges. I love collaborating on
+						innovative projects that push boundaries and fuel creativity.
 					</h4>
 				</div>
 				<div className={classes.main__right}>

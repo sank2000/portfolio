@@ -11,16 +11,25 @@ export default function Skills() {
 				<Skill icon='icon-typescript'></Skill>
 				<Skill icon='icon-c'></Skill>
 				<Skill icon='icon-cplusplus' title='C++'></Skill>
+				<span>
+					<span className={classes.slash}>/</span>
+					&gt;
+				</span>
 			</div>
 			<div className={classes.icon_container}>
 				<Skill icon='icon-mysql'></Skill>
 				<Skill icon='icon-postgresql'></Skill>
 				<Skill icon='icon-mongodb'></Skill>
 				<Skill icon='icon-firebase'></Skill>
+				<span>
+					<span className={classes.slash}>/</span>
+					&gt;
+				</span>
 			</div>
 			<div className={classes.icon_container}>
 				<Skill icon='icon-spring'></Skill>
 				<Skill icon='icon-apachekafka' title='Apache Kafka'></Skill>
+				<Skill icon='icon-redis'></Skill>
 				<Skill icon='icon-figma'></Skill>
 				<Skill icon='icon-html5'></Skill>
 				<Skill icon='icon-css3'></Skill>
@@ -64,6 +73,10 @@ export default function Skills() {
 				<Skill icon='icon-jest'></Skill>
 				<Skill icon='icon-git'></Skill>
 				<Skill icon='icon-docker'></Skill>
+				<span>
+					<span className={classes.slash}>/</span>
+					&gt;
+				</span>
 			</div>
 		</>
 	);

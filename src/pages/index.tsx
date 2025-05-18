@@ -102,7 +102,12 @@ export default function Index() {
 				<section className='section' {...handlers}>
 					<Particles />
 					<AnimatePresence exitBeforeEnter>
-						{page.no === 1 && <Home {...{ exitLeft, setExitLeft, page, setPage }} key='home' />}
+						{page.no === 1 && (
+							<Home
+								{...{ exitLeft, setExitLeft, page, setPage, isPageLoading: loader }}
+								key='home'
+							/>
+						)}
 						{page.no === 2 && <About {...{ exitLeft, setExitLeft, page, setPage }} key='about' />}
 						{page.no === 3 && (
 							<Experience {...{ exitLeft, setExitLeft, page, setPage }} key='experience' />

@@ -4,24 +4,22 @@ import classes from './style.module.scss';
 
 export default function Contact() {
 	return (
-		<div>
-			<h4>Wanna interact or work with me ? Drop a message .My inbox is always open for you.</h4>
+		<div className={classes.contact_body}>
+			<h4>
+				Interested in collaborating or just want to say hello<span>?</span>
+			</h4>
+			<h5>
+				Feel free to reach out &mdash; I&apos;m always happy to connect<span>!</span>
+			</h5>
 			<div className={classes.links}>
-				<a
-					target='_blank'
-					rel='noreferrer'
-					href='https://www.linkedin.com/in/santhosh-k-589203178/'
-				>
+				<a target='_blank' rel='noreferrer' href='https://www.linkedin.com/in/santhosh-dev/'>
 					<span className='icon-linkedin'></span>
 				</a>
-				<a target='_blank' rel='noreferrer' href='https://twitter.com/santhoshvelr'>
-					<span className='icon-twitter'></span>
-				</a>
 				<a target='_blank' rel='noreferrer' href='mailto:santhoshvelr@gmail.com'>
-					<span className='icon-gmail'></span>
+					<span className='icon-mail'></span>
 				</a>
-				<a target='_blank' rel='noreferrer' href='https://github.com/sank2000'>
-					<span className='icon-github1'></span>
+				<a target='_blank' rel='noreferrer' href='https://www.instagram.com/santhosh_aka_san/'>
+					<span className='icon-instagram'></span>
 				</a>
 			</div>
 		</div>

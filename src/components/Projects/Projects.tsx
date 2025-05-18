@@ -18,7 +18,7 @@ export default function Projects({ page, exitLeft, setExitLeft }: withAdditional
 			animate='visible'
 			exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
 		>
-			<NavBar name='Projects' {...{ setExitLeft }} />
+			<NavBar name='<Projects />' {...{ setExitLeft }} />
 
 			<main className={classes.main}>
 				<section className={classes.more}>

@@ -210,6 +210,12 @@
 					text-decoration: none;
 					color: $color-white;
 					font-size: 2.5rem;
+					transition: color 0.3s ease;
+
+					&:hover {
+						text-decoration: none;
+						color: $color-primary-font-over-main;
+					}
 
 					&:not(:last-child) {
 						margin-right: 1em;
@@ -259,6 +265,12 @@
 					border-radius: 20px;
 
 					box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+					transition: color 0.3s ease;
+
+					&:hover {
+						text-decoration: none;
+						color: $color-primary-font-over-main;
+					}
 
 					&:not(:last-child) {
 						margin-right: 1em;

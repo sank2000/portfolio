@@ -53,7 +53,7 @@ export default function Experience({ page, exitLeft, setExitLeft }: withAddition
 			animate='visible'
 			exit={exitLeft.status ? 'exitLeft' : 'exitRight'}
 		>
-			<NavBar name='Experience' {...{ setExitLeft }} />
+			<NavBar name='<Experience />' {...{ setExitLeft }} />
 
 			{show && (
 				<main className={classes.main} ref={mainRef}>

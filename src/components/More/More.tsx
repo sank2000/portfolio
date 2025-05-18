@@ -29,13 +29,17 @@ export default function More({ page, setExitLeft }: withAdditionalProps) {
 			<main className={classes.main}>
 				<div className={classes.skills}>
 					<div className={classes.head}>
-						<h3>Skills</h3>
+						<h3>
+							&lt;Skills <span>/</span>&gt;
+						</h3>
 					</div>
 					<Skills />
 				</div>
 				<div className={classes.contact}>
 					<div className={classes.head}>
-						<h3>GET IN TOUCH</h3>
+						<h3>
+							&lt;Get In Touch <span>/</span>&gt;
+						</h3>
 					</div>
 					<Contact />
 				</div>
