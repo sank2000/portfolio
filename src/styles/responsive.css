@@ -1,0 +1,495 @@
+@media (max-width: 1100px) {
+  .site-header,
+  .main-grid,
+  .projects-main,
+  .about-main,
+  .connect-main {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-left {
+    grid-column: span 12 / span 12;
+  }
+
+  .hero-right {
+    grid-column: span 12 / span 12;
+    height: auto;
+    min-height: 22rem;
+    margin-top: 0.25rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .connect-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-skills-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .orbit-ring {
+    width: 360px;
+    height: 360px;
+  }
+
+  .code-card {
+    width: min(20rem, 92vw);
+    height: auto;
+    min-height: 22rem;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding-top: 1.25rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.6rem, 24vw, 5rem);
+    white-space: nowrap;
+  }
+
+  .hero-quote {
+    font-size: 1.6rem;
+    max-width: 100%;
+  }
+
+  .main-grid,
+  .projects-main,
+  .connect-main,
+  .about-main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .main-grid {
+    padding-top: 1.5rem;
+    padding-bottom: 7.5rem;
+    gap: 2rem;
+  }
+
+  .hero-right {
+    min-height: 20rem;
+  }
+
+  .orbit-ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .dock-wrap {
+    bottom: 1rem;
+  }
+
+  .projects-main,
+  .connect-main,
+  .about-main {
+    padding-top: 1.5rem;
+    padding-bottom: 7.5rem;
+  }
+
+  .about-main {
+    padding-bottom: 5.25rem;
+  }
+
+  .connect-main {
+    padding-bottom: 5.25rem;
+  }
+
+  .connect-main {
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .projects-heading {
+    font-size: 2.2rem;
+  }
+
+  .projects-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .connect-heading {
+    font-size: 2.2rem;
+  }
+
+  .connect-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-note {
+    margin-top: 0;
+    max-width: none;
+    padding: 0.9rem 1rem;
+  }
+
+  .connect-note-copy {
+    font-size: 1.05rem;
+  }
+
+  .connect-note-meta {
+    font-size: 0.85rem;
+  }
+
+  .connect-ai-credit {
+    margin-top: 0;
+    font-size: 0.85rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .about-back-text {
+    font-size: 1.5rem;
+  }
+
+  .about-cv-tag {
+    font-size: 1rem;
+  }
+
+  .about-main {
+    gap: 3rem;
+  }
+
+  .hello-note {
+    font-size: 1.05rem;
+    padding: 0.4rem 0.95rem;
+  }
+
+  .about-description {
+    font-size: 1.25rem;
+  }
+
+  .about-intro-card {
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  .about-photo {
+    height: 18rem;
+  }
+
+  .about-timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline-line {
+    left: 0.75rem;
+    margin-left: 0;
+    transform: none;
+  }
+
+  .timeline-grid {
+    padding-left: 2rem;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .timeline-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .timeline-dot {
+    top: 1.1rem;
+    left: -2rem;
+    right: auto;
+    transform: none;
+  }
+
+  .about-section-title,
+  .about-section-heading {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .status-pill {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .status-text {
+    letter-spacing: 0;
+  }
+
+  .role-tag {
+    font-size: 1.45rem;
+    padding: 0.5rem 0.95rem;
+  }
+
+  .single-experience {
+    font-size: 1.85rem;
+    word-spacing: 0.04em;
+  }
+
+  .connect-main {
+    gap: 1.35rem;
+  }
+
+  .connect-title {
+    font-size: 1.7rem;
+  }
+
+  .project-title {
+    font-size: 1.65rem;
+  }
+
+  .project-copy {
+    font-size: 1rem;
+  }
+
+  .dock {
+    width: min(100%, 22rem);
+    justify-content: space-between;
+    padding: 0.45rem 0.65rem;
+    gap: 0.2rem;
+  }
+
+  .dock-item {
+    padding: 0.35rem 0.3rem;
+  }
+
+  .dock-item svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .dock-item span {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header,
+  .main-grid,
+  .projects-main,
+  .connect-main,
+  .about-main {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3.15rem, 22vw, 4.3rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.65rem;
+  }
+
+  .hero-quote {
+    font-size: 1.28rem;
+    line-height: 1.35;
+    max-width: 100%;
+  }
+
+  .status-pill {
+    font-size: 0.84rem;
+  }
+
+  .role-tag {
+    font-size: 1.2rem;
+  }
+
+  .projects-heading,
+  .connect-heading,
+  .about-section-title {
+    font-size: 1.95rem;
+  }
+
+  .connect-subtitle,
+  .projects-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .connect-card {
+    padding: 0.9rem;
+  }
+
+  .connect-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .connect-title {
+    font-size: 1.5rem;
+  }
+
+  .connect-handle {
+    font-size: 0.86rem;
+  }
+
+  .about-description {
+    font-size: 1.08rem;
+  }
+
+  .about-photo {
+    height: 15rem;
+  }
+
+  .about-photo-tag {
+    font-size: 1.1rem;
+    right: -0.7rem;
+    bottom: -0.9rem;
+  }
+
+  .timeline-title {
+    font-size: 1.7rem;
+  }
+
+  .timeline-points {
+    gap: 0.25rem;
+  }
+
+  .timeline-points li {
+    line-height: 1.35;
+  }
+
+  .dock {
+    width: min(100%, 20rem);
+    padding: 0.35rem 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: clamp(2.2rem, 16vw, 3rem);
+  }
+
+  .status-pill {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.55rem;
+    max-width: 100%;
+  }
+
+  .role-tag {
+    font-size: 1.05rem;
+    padding: 0.45rem 0.7rem;
+  }
+
+  .single-experience {
+    font-size: 1.55rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+  }
+
+  .project-thumb {
+    height: 10rem;
+  }
+
+  .tag-sketch {
+    font-size: 0.78rem;
+    padding: 0.1rem 0.45rem;
+  }
+
+  .connect-note-copy {
+    font-size: 0.95rem;
+  }
+
+  .hero-quote {
+    font-size: 1.12rem;
+    line-height: 1.4;
+    max-width: 100%;
+  }
+
+  .connect-ai-credit {
+    font-size: 0.75rem;
+    padding: 0.28rem 0.55rem;
+  }
+
+  .about-chip {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .timeline-card {
+    padding: 0.9rem 0.9rem 1rem;
+  }
+
+  .timeline-period {
+    font-size: 0.82rem;
+  }
+
+  .timeline-title {
+    font-size: 1.45rem;
+  }
+
+  .dock {
+    width: 100%;
+  }
+
+  .dock-item span {
+    font-size: 0.62rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .main-grid {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-left {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-quote {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    text-wrap-style: balance;
+  }
+}

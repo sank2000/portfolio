@@ -1,9 +1,0 @@
-export { default as About } from './About/About';
-export { default as CustomHead } from './CustomHead/CustomHead';
-export { default as Experience } from './Experience/Experience';
-export { default as Home } from './Home/Home';
-export { default as Loader } from './Loader/Loader';
-export { default as More } from './More/More';
-export { default as NavBar } from './NavBar/NavBar';
-export { default as Particles } from './Particles/Particles';
-export { default as Projects } from './Projects/Projects';
