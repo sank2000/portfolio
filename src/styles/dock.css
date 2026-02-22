@@ -1,0 +1,48 @@
+.dock-wrap {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.dock {
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  color: var(--ink-sepia);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.dock-item:hover {
+  color: var(--accent-terracotta);
+}
+
+.dock-item.active {
+  color: var(--accent-terracotta);
+}
+
+.dock-item span {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.dock-divider {
+  width: 2px;
+  height: 2rem;
+  background: var(--ink-sepia);
+  opacity: 0.2;
+}
+
