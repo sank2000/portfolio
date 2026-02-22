@@ -31,7 +31,7 @@
   {
     "name": "AUBIT",
     "image": "https://raw.githubusercontent.com/Infinite-Loop-Club/AUBIT/master/public/images/logo-maroon.png",
-    "description": "The unofficial website of University College of Engineering, BIT Campus, Tiruchirappalli. The website is still under development and will be approved upon completion to be the official website. Built with React.",
+    "description": "The unofficial website of University College of Engineering, BIT Campus, Tiruchirappalli.",
     "stack": ["react"],
     "link": "https://aubit.netlify.app/",
     "github": "https://github.com/Infinite-Loop-Club/AUBIT"
